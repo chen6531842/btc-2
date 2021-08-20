@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <title>BitoPro 台湾币托交易所</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script>window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam.nr-data.net", "errorBeacon": "bam.nr-data.net", "licenseKey": "d0f875920e", "applicationID": "951818790", "transactionName": "elYMQkZeVF5RQk1AU15cERldX1xXTA==", "queueTime": 0, "applicationTime": 28, "agent": "" }</script>
+  <script>(window.NREUM || (NREUM = {})).loader_config = { licenseKey: "d0f875920e", applicationID: "951818790" }; window.NREUM || (NREUM = {}), __nr_require = function (t, e, n) { function r(n) { if (!e[n]) { var i = e[n] = { exports: {} }; t[n][0].call(i.exports, function (e) { var i = t[n][1][e]; return r(i || e) }, i, i.exports) } return e[n].exports } if ("function" == typeof __nr_require) return __nr_require; for (var i = 0; i < n.length; i++)r(n[i]); return r }({ 1: [function (t, e, n) { function r() { } function i(t, e, n) { return function () { return o(t, [u.now()].concat(f(arguments)), e ? null : this, n), e ? void 0 : this } } var o = t("handle"), a = t(8), f = t(9), c = t("ee").get("tracer"), u = t("loader"), s = NREUM; "undefined" == typeof window.newrelic && (newrelic = s); var d = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"], p = "api-", l = p + "ixn-"; a(d, function (t, e) { s[e] = i(p + e, !0, "api") }), s.addPageAction = i(p + "addPageAction", !0), s.setCurrentRouteName = i(p + "routeName", !0), e.exports = newrelic, s.interaction = function () { return (new r).get() }; var m = r.prototype = { createTracer: function (t, e) { var n = {}, r = this, i = "function" == typeof e; return o(l + "tracer", [u.now(), t, n], r), function () { if (c.emit((i ? "" : "no-") + "fn-start", [u.now(), r, i], n), i) try { return e.apply(this, arguments) } catch (t) { throw c.emit("fn-err", [arguments, this, t], n), t } finally { c.emit("fn-end", [u.now()], n) } } } }; a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (t, e) { m[e] = i(l + e) }), newrelic.noticeError = function (t, e) { "string" == typeof t && (t = new Error(t)), o("err", [t, u.now(), !1, e]) } }, {}], 2: [function (t, e, n) { function r(t) { if (NREUM.init) { for (var e = NREUM.init, n = t.split("."), r = 0; r < n.length - 1; r++)if (e = e[n[r]], "object" != typeof e) return; return e = e[n[n.length - 1]] } } e.exports = { getConfiguration: r } }, {}], 3: [function (t, e, n) { function r() { return f.exists && performance.now ? Math.round(performance.now()) : (o = Math.max((new Date).getTime(), o)) - a } function i() { return o } var o = (new Date).getTime(), a = o, f = t(10); e.exports = r, e.exports.offset = a, e.exports.getLastTimestamp = i }, {}], 4: [function (t, e, n) { function r(t) { return !(!t || !t.protocol || "file:" === t.protocol) } e.exports = r }, {}], 5: [function (t, e, n) { function r(t, e) { var n = t.getEntries(); n.forEach(function (t) { "first-paint" === t.name ? d("timing", ["fp", Math.floor(t.startTime)]) : "first-contentful-paint" === t.name && d("timing", ["fcp", Math.floor(t.startTime)]) }) } function i(t, e) { var n = t.getEntries(); n.length > 0 && d("lcp", [n[n.length - 1]]) } function o(t) { t.getEntries().forEach(function (t) { t.hadRecentInput || d("cls", [t]) }) } function a(t) { if (t instanceof m && !g) { var e = Math.round(t.timeStamp), n = { type: t.type }; e <= p.now() ? n.fid = p.now() - e : e > p.offset && e <= Date.now() ? (e -= p.offset, n.fid = p.now() - e) : e = p.now(), g = !0, d("timing", ["fi", e, n]) } } function f(t) { "hidden" === t && d("pageHide", [p.now()]) } if (!("init" in NREUM && "page_view_timing" in NREUM.init && "enabled" in NREUM.init.page_view_timing && NREUM.init.page_view_timing.enabled === !1)) { var c, u, s, d = t("handle"), p = t("loader"), l = t(7), m = NREUM.o.EV; if ("PerformanceObserver" in window && "function" == typeof window.PerformanceObserver) { c = new PerformanceObserver(r); try { c.observe({ entryTypes: ["paint"] }) } catch (v) { } u = new PerformanceObserver(i); try { u.observe({ entryTypes: ["largest-contentful-paint"] }) } catch (v) { } s = new PerformanceObserver(o); try { s.observe({ type: "layout-shift", buffered: !0 }) } catch (v) { } } if ("addEventListener" in document) { var g = !1, h = ["click", "keydown", "mousedown", "pointerdown", "touchstart"]; h.forEach(function (t) { document.addEventListener(t, a, !1) }) } l(f) } }, {}], 6: [function (t, e, n) { function r(t, e) { if (!i) return !1; if (t !== i) return !1; if (!e) return !0; if (!o) return !1; for (var n = o.split("."), r = e.split("."), a = 0; a < r.length; a++)if (r[a] !== n[a]) return !1; return !0 } var i = null, o = null, a = /Version\/(\S+)\s+Safari/; if (navigator.userAgent) { var f = navigator.userAgent, c = f.match(a); c && f.indexOf("Chrome") === -1 && f.indexOf("Chromium") === -1 && (i = "Safari", o = c[1]) } e.exports = { agent: i, version: o, match: r } }, {}], 7: [function (t, e, n) { function r(t) { function e() { t(a && document[a] ? document[a] : document[i] ? "hidden" : "visible") } "addEventListener" in document && o && document.addEventListener(o, e, !1) } e.exports = r; var i, o, a; "undefined" != typeof document.hidden ? (i = "hidden", o = "visibilitychange", a = "visibilityState") : "undefined" != typeof document.msHidden ? (i = "msHidden", o = "msvisibilitychange") : "undefined" != typeof document.webkitHidden && (i = "webkitHidden", o = "webkitvisibilitychange", a = "webkitVisibilityState") }, {}], 8: [function (t, e, n) { function r(t, e) { var n = [], r = "", o = 0; for (r in t) i.call(t, r) && (n[o] = e(r, t[r]), o += 1); return n } var i = Object.prototype.hasOwnProperty; e.exports = r }, {}], 9: [function (t, e, n) { function r(t, e, n) { e || (e = 0), "undefined" == typeof n && (n = t ? t.length : 0); for (var r = -1, i = n - e || 0, o = Array(i < 0 ? 0 : i); ++r < i;)o[r] = t[e + r]; return o } e.exports = r }, {}], 10: [function (t, e, n) { e.exports = { exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart } }, {}], ee: [function (t, e, n) { function r() { } function i(t) { function e(t) { return t && t instanceof r ? t : t ? u(t, c, a) : a() } function n(n, r, i, o, a) { if (a !== !1 && (a = !0), !l.aborted || o) { t && a && t(n, r, i); for (var f = e(i), c = v(n), u = c.length, s = 0; s < u; s++)c[s].apply(f, r); var p = d[w[n]]; return p && p.push([b, n, r, f]), f } } function o(t, e) { y[t] = v(t).concat(e) } function m(t, e) { var n = y[t]; if (n) for (var r = 0; r < n.length; r++)n[r] === e && n.splice(r, 1) } function v(t) { return y[t] || [] } function g(t) { return p[t] = p[t] || i(n) } function h(t, e) { l.aborted || s(t, function (t, n) { e = e || "feature", w[n] = e, e in d || (d[e] = []) }) } var y = {}, w = {}, b = { on: o, addEventListener: o, removeEventListener: m, emit: n, get: g, listeners: v, context: e, buffer: h, abort: f, aborted: !1 }; return b } function o(t) { return u(t, c, a) } function a() { return new r } function f() { (d.api || d.feature) && (l.aborted = !0, d = l.backlog = {}) } var c = "nr@context", u = t("gos"), s = t(8), d = {}, p = {}, l = e.exports = i(); e.exports.getOrSetContext = o, l.backlog = d }, {}], gos: [function (t, e, n) { function r(t, e, n) { if (i.call(t, e)) return t[e]; var r = n(); if (Object.defineProperty && Object.keys) try { return Object.defineProperty(t, e, { value: r, writable: !0, enumerable: !1 }), r } catch (o) { } return t[e] = r, r } var i = Object.prototype.hasOwnProperty; e.exports = r }, {}], handle: [function (t, e, n) { function r(t, e, n, r) { i.buffer([t], r), i.emit(t, e, n) } var i = t("ee").get("handle"); e.exports = r, r.ee = i }, {}], id: [function (t, e, n) { function r(t) { var e = typeof t; return !t || "object" !== e && "function" !== e ? -1 : t === window ? 0 : a(t, o, function () { return i++ }) } var i = 1, o = "nr@id", a = t("gos"); e.exports = r }, {}], loader: [function (t, e, n) { function r() { if (!R++) { var t = M.info = NREUM.info, e = v.getElementsByTagName("script")[0]; if (setTimeout(u.abort, 3e4), !(t && t.licenseKey && t.applicationID && e)) return u.abort(); c(E, function (e, n) { t[e] || (t[e] = n) }); var n = a(); f("mark", ["onload", n + M.offset], null, "api"), f("timing", ["load", n]); var r = v.createElement("script"); 0 === t.agent.indexOf("http://") || 0 === t.agent.indexOf("https://") ? r.src = t.agent : r.src = l + "://" + t.agent, e.parentNode.insertBefore(r, e) } } function i() { "complete" === v.readyState && o() } function o() { f("mark", ["domContent", a() + M.offset], null, "api") } var a = t(3), f = t("handle"), c = t(8), u = t("ee"), s = t(6), d = t(4), p = t(2), l = p.getConfiguration("ssl") === !1 ? "http" : "https", m = window, v = m.document, g = "addEventListener", h = "attachEvent", y = m.XMLHttpRequest, w = y && y.prototype, b = !d(m.location); NREUM.o = { ST: setTimeout, SI: m.setImmediate, CT: clearTimeout, XHR: y, REQ: m.Request, EV: m.Event, PR: m.Promise, MO: m.MutationObserver }; var x = "" + location, E = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-1210.min.js" }, O = y && w && w[g] && !/CriOS/.test(navigator.userAgent), M = e.exports = { offset: a.getLastTimestamp(), now: a, origin: x, features: {}, xhrWrappable: O, userAgent: s, disabled: b }; if (!b) { t(1), t(5), v[g] ? (v[g]("DOMContentLoaded", o, !1), m[g]("load", r, !1)) : (v[h]("onreadystatechange", i), m[h]("onload", r)), f("mark", ["firstbyte", a.getLastTimestamp()], null, "api"); var R = 0 } }, {}], "wrap-function": [function (t, e, n) { function r(t, e) { function n(e, n, r, c, u) { function nrWrapper() { var o, a, s, p; try { a = this, o = d(arguments), s = "function" == typeof r ? r(o, a) : r || {} } catch (l) { i([l, "", [o, a, c], s], t) } f(n + "start", [o, a, c], s, u); try { return p = e.apply(a, o) } catch (m) { throw f(n + "err", [o, a, m], s, u), m } finally { f(n + "end", [o, a, p], s, u) } } return a(e) ? e : (n || (n = ""), nrWrapper[p] = e, o(e, nrWrapper, t), nrWrapper) } function r(t, e, r, i, o) { r || (r = ""); var f, c, u, s = "-" === r.charAt(0); for (u = 0; u < e.length; u++)c = e[u], f = t[c], a(f) || (t[c] = n(f, s ? c + r : r, i, c, o)) } function f(n, r, o, a) { if (!m || e) { var f = m; m = !0; try { t.emit(n, r, o, e, a) } catch (c) { i([c, n, r, o], t) } m = f } } return t || (t = s), n.inPlace = r, n.flag = p, n } function i(t, e) { e || (e = s); try { e.emit("internal-error", t) } catch (n) { } } function o(t, e, n) { if (Object.defineProperty && Object.keys) try { var r = Object.keys(t); return r.forEach(function (n) { Object.defineProperty(e, n, { get: function () { return t[n] }, set: function (e) { return t[n] = e, e } }) }), e } catch (o) { i([o], n) } for (var a in t) l.call(t, a) && (e[a] = t[a]); return e } function a(t) { return !(t && t instanceof Function && t.apply && !t[p]) } function f(t, e) { var n = e(t); return n[p] = t, o(t, n, s), n } function c(t, e, n) { var r = t[e]; t[e] = f(r, n) } function u() { for (var t = arguments.length, e = new Array(t), n = 0; n < t; ++n)e[n] = arguments[n]; return e } var s = t("ee"), d = t(9), p = "nr@original", l = Object.prototype.hasOwnProperty, m = !1; e.exports = r, e.exports.wrapFunction = f, e.exports.wrapInPlace = c, e.exports.argsToArray = u }, {}] }, {}, ["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <meta name="keywords"
+    content="bitopro,币托,区块链,btc,bitcoin,usdt,eth,bito,exchange,token,api,台湾交易所,比特币走势,虚拟货币,虚拟通货,比特币交易,比特币行情,虚拟货币交易所,比特币是什么,比特币价格美元,区块链投资,比特币钱包,数字货币,比特币投资,比特币未来趋势,虚拟货币投资,比特币交易所,比特币价格走势,虚拟货币排名">
+  <meta name="content" content="BitoPro 是最值得信赖的数位货币交易平台">
+  <meta name="description" content="BitoPro 是最值得信赖的数位货币交易平台">
+  <meta name="author" content="BitoEX">
+  <meta name="theme-color" content="#2D4F8F">
+
+  <meta property="tangerine:image" content="./img/partner/bitopro_tangerine.png" />
+
+
+  <meta property="og:site_name" content="BitoPro">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BitoPro 台湾币托交易所">
+  <meta property="og:url" content="https://www.bitopro.com">
+  <meta property="og:description" content="BitoPro 是最值得信赖的数位货币交易平台">
+  <meta property="og:image" content="./img/index_share_facebook_image.png" />
+  <meta property="og:image:url" content="./img/index_share_facebook_image.png" />
+  <meta property="og:image:secure_url" content="./img/index_share_facebook_image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:site" content="@BitoPro">
+  <meta name="twitter:creator" content="@BitoPro">
+  <meta name="twitter:title" content="BitoPro 台湾币托交易所">
+  <meta name="twitter:description" content="BitoPro 是最值得信赖的数位货币交易平台">
+  <meta name="twitter:image" content="./img_share_facebook_image.png">
+
+  <meta name="apple-mobile-web-app-capable" content="no" />
+  <meta name="mobile-web-app-capable" content="no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="BitoPro">
+
+  <!-- <meta name="apple-touch-fullscreen" content="no" />
+
+  <meta name="smartbanner:title" content="BitoPro虚拟货币交易所">
+  <meta name="smartbanner:author" content="Bitoex LTD">
+  <meta name="smartbanner:price" content="点击进入">
+  <meta name="smartbanner:price-suffix-apple" content="App Store">
+  <meta name="smartbanner:price-suffix-google" content="Google Play">
+  <meta name="smartbanner:icon-apple" content="./img/bitopro_smartbanner.png">
+  <meta name="smartbanner:icon-google" content="./img/bitopro_smartbanner.png">
+  <meta name="smartbanner:button" content="开启">
+  <meta name="smartbanner:button-url-apple" content="https://apps.apple.com/app/id1393007496">
+  <meta name="smartbanner:button-url-google"
+    content="https://play.google.com/store/apps/details?id=com.bitoex.bitoproapp">
+  <meta name="smartbanner:enabled-platforms" content="android,ios">
+  <meta name="smartbanner:close-label" content="关闭"> -->
+
+  <meta name="format-detection" content="telephone=no">
+
+
+  <!-- <meta name="csrf-param" content="authenticity_token" />
+  <meta name="csrf-token"
+    content="lqO93+e3uqHBCj3oFs0h22wKllseb3BvqU1XpYikOWJTRk7gyaq80MXFSj0CUSFrKajusVU5CT62I/kHbgeNSA==" />
+  <meta name="csp-nonce" /> -->
+
+  <link rel="stylesheet" media="all"
+    href="./css/data-1.css" />
+  <!-- <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+
+  <link rel="apple-touch-icon-precomposed" sizes="60x60"
+    href="./img/ico/apple-touch-icon-60-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76"
+    href="./img/ico/apple-touch-icon-76-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="80x80"
+    href="./img/ico/apple-touch-icon-80-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120"
+    href="./img/ico/apple-touch-icon-120-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152"
+    href="./img/ico/apple-touch-icon-152-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="167x167"
+    href="./img/ico/apple-touch-icon-167-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="180x180"
+    href="./img/ico/apple-touch-icon-180-precomposed.png" /> -->
+  <link rel="stylesheet" media="all"
+    href="./css/data.css" />
+
+
+</head>
+
+<body>
+  <div class="body-wrapper" id="zone" data-ws="wss://www.bitopro.com/ws/usdt_twd" data-ws-kind="usdt_twd"
+    data-cyber="usdt" data-center="twd" data-env="production">
+
+
+    <section id="index">
+
+      <div class="header">
+        <nav id="header" class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <div class="visible-xs">
+                <ul class="nav navbar-nav pull-right m-t-xs">
+                  <li>
+                    <a class="dropdown-toggle count-info notice-load" data-toggle="dropdown" href="#"
+                      data-url="/announcements/visible_data">
+                      <i class="fas fa-bell"></i>
+                    </a>
+                    <ul class="dropdown-menu right dropdown-alerts notice">
+                      <i class="fas fa-2x fa-spinner fa-spin spin-center"></i>
+                    </ul>
+                  </li>
+                  <li><a class="login-mobile" href="/users/sign_in">登入</a></li>
+                </ul>
+              </div>
+              <a href="/" class="navbar-brand">
+                <img class="site-logo" src="./img/bitoPro_logo.svg" alt="Logo">
+              </a>
+              <ul class="nav navbar-nav navbar-nav-lang pull-left hidden-xs">
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i
+                      class="fas fa-th fa-large m-t-xs"></i></a>
+                  <ul class="dropdown-menu left brand" style="width: 225px;" role="menu">
+                    <li>
+                      <a href="https://www.bitopro.com">
+                        <div style="height: 44px; display: inline-block; vertical-align: top;">
+                          <img class="site-image" src="./img/product-pro@2x.png"
+                            alt="BitoPro" />
+                        </div>
+                        <div style="display: inline-block;vertical-align: top;">
+                          <span class="site-name">BitoPro</span>
+                          <p class="brand-name">币托交易所</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                      <a href="https://www.bitoex.com">
+                        <div style="height: 44px; display: inline-block; vertical-align: top;">
+                          <img class="site-image" src="./img/product-ex@2x.png" alt="BitoEX" />
+                        </div>
+                        <div style="display: inline-block;vertical-align: top;">
+                          <span class="site-name">BitoEX</span>
+                          <p class="brand-name">币托钱包</p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav pull-right m-t-xs">
+                <li><a href="/trading">交易中心</a></li>
+                <li class="hidden-sm hidden-md"><a href="/bito_coin">BITO</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">理财 <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="/debts">
+                        <div style="height: 44px; display: inline-block; vertical-align: top;">
+                          <img class="site-image" src="https://cdn.bitopro.com/announcement/events_bitodebt@2x.png"
+                            alt="BitoPro" />
+                        </div>
+                        <div style="display: inline-block;vertical-align: top;">
+                          <span style="font-size: 18px; font-weight: 600;">BitoDebt</span>
+                          <span class="label-event m-l-md">年化8.5%</span>
+                          <p class="m-t-xs">买债权赚利息</p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="/users/sign_up">注册</a></li>
+                <li><a href="/users/sign_in">登入</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle count-info notice-load" data-toggle="dropdown" href="#"
+                    data-url="/announcements/visible_data">
+                    <i class="fas fa-bell fa-large"></i>
+                  </a>
+                  <ul class="dropdown-menu right dropdown-alerts notice">
+                    <i class="fas fa-2x fa-spinner fa-spin"></i>
+                  </ul>
+                </li>
+                <li class="separation">|</li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i
+                      class="fas fa-mobile-alt fa-large"></i></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <p class="download-app-title">扫描下载 BitoPro APP</p>
+                      <p id="qrcode_store"></p>
+                      <p class="download-app-desc">同步支援 iOS 与 Andorid 系统</p>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i
+                      class="fas fa-question-circle fa-large"></i></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://bitopro.zendesk.com/hc/zh-tw" target="_blank" rel="noreferer,noopener"
+                        title="BitoPro 常见问题">常见问题 <i class="fas fa-external-link-alt m-l-xs"></i></a></li>
+                    <li>
+                      <a href="/fees">限制与费用</a>
+                    </li>
+                    <li><a href="/contact" title="BitoPro 联络我们">联络我们</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="hidden-xs">
+        <div id="myCarousel" class="carousel slide" data-interval="10000" data-wrap="true" data-ride="carousel">
+
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" class="banner-1" data-slide-to="0">
+              <h1 class="title" onClick="location.href='/trading';">国际数位资产<br />交易平台</h1>
+            </li>
+            <li data-target="#myCarousel" class="banner-2" data-slide-to="1">
+              <h1 class="title" onClick="location.href='/debts';">BitoDebt<br />债权认购平台</h1>
+            </li>
+            <li data-target="#myCarousel" class="banner-3 active" data-slide-to="2">
+              <h1 class="title" onClick="location.href='/trading/matic_twd';">MATIC 币<br />上架币托！</h1>
+            </li>
+          </ol>
+
+          <div class="carousel-inner">
+            <div class="item bg-1">
+              <section class="welcome-btns">
+                <h1 class="title-1">你最得值得信赖的<br />国际数位资产交易平台</h1>
+                <a class="btn btn-lg btn-outline btn-default m-r-sm" href="/trading" role="button">预览</a>
+                <a class="btn btn-lg btn-primary" href="/users/sign_up">注册</a>
+                <div class="mobile-btns">
+                  <a class="app_store_icon" href="https://itunes.apple.com/tw/app/bitopro/id1393007496?mt=8"
+                    target="_blank" rel="noreferer,noopener">
+                    <img src="./img/ic_app_store.png" alt="BitoPro App Store">
+                  </a>
+                  <a class="google_play_icon" href="https://play.google.com/store/apps/details?id=com.bitoex.bitoproapp"
+                    target="_blank" rel="noreferer,noopener">
+                    <img src="./img/ic_google_play.png" alt="BitoPro Google Play">
+                  </a>
+                </div>
+              </section>
+              <img src="./img/index_bg_keyvisaul_bitopro.png" class="bg"
+                alt="BitoPro 您最值得信赖的国际数位资产交易平台" />
+            </div>
+
+            <div class="item bg-2">
+              <section class="welcome-btns" style="top:30%;">
+                <h1 class="title-2" style="font-weight: 600;">BitoDebt债权认购平台</h1>
+                <h3 class="sub-title">买债生息就是这么好赚</h3><br />
+                <a class="btn btn-lg btn-primary btn-width debt" href="/debts">了解更多</a>
+              </section>
+              <img src="./img/index_bitodebt_bg_bitopro.png" class="bg"
+                alt="BitoDebt债权认购平台">
+            </div>
+
+            <div class="item bg-3 active">
+              <section class="welcome-btns" style="top:30%;">
+                <h1 class="title-2" style="font-weight: 600;">MATIC 币上架币托！</h1>
+                <h3 class="sub-title">开放 MATIC/TWD丶MATIC/USDT 交易对</h3><br />
+                <a class="btn btn-lg btn-primary btn-width debt" href="/trading/matic_twd">进入交易</a>
+              </section>
+              <img class="bg" style="width: 100%;"
+                src="./img/matic-web-bg-home-015570a4788b59f0b032bf9dd5a9a7de85512ebf2479c9ebca4483d5874f08d1.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="visible-xs">
+        <div class="banner">
+
+          <div class="bg-m bg-m-1">
+            <h1 class="title">你最得值得信赖的<br />国际数位资产交易平台</h1>
+            <a class="btn btn-lg btn-outline btn-default m-r-sm" href="/trading" role="button">预览</a>
+            <a class="btn btn-lg btn-primary" href="/users/sign_up">注册</a>
+            <div class="mobile-btns">
+              <a class="app_store_icon" href="https://itunes.apple.com/tw/app/bitopro/id1393007496?mt=8" target="_blank"
+                rel="noreferer,noopener">
+                <img src="./img/ic_app_store.png" alt="BitoPro App Store">
+              </a>
+              <a id="google_play_icon" href="https://play.google.com/store/apps/details?id=com.bitoex.bitoproapp"
+                target="_blank" rel="noreferer,noopener">
+                <img src="./img/ic_google_play.png" alt="BitoPro Google Play" class="m-l-xs">
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-m bg-m-2">
+            <h1 class="title">BitoDebt债权认购平台</h1>
+            <h2 class="sub-title">买债生息就是这么好赚</h2>
+            <div class="mobile-btns">
+              <a class="btn btn-lg btn-primary btn-block referral" href="/debts">了解更多</a>
+            </div>
+          </div>
+
+          <div class="bg-m bg-m-3">
+            <h1 class="title">MATIC 币上架币托！</h1>
+            <h2 class="sub-title">开放 MATIC/TWD丶MATIC/USDT 交易对</h2>
+            <div class="mobile-btns">
+              <a class="btn btn-lg btn-primary btn-block referral" href="/trading/matic_twd">进入交易</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rate">
+        <div class="rate-block">
+          <div class="rate-title">
+            <ul class="nav nav-tabs">
+              <li v-for="favTab in favTabs" v-bind:class="{ active: favTab[0] }">
+                <a data-toggle="tab" v-bind:href="'#' + favTab[1]">
+                  <span v-html="favTab[2]"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="rate-content tab-content">
+            <template v-for="favTab in favTabs">
+              <div v-bind:id="favTab[1]" class="tab-pane fade in" v-bind:class="{ active: favTab[0] }">
+                <div class="table-responsive">
+                  <table class="table table-section">
+                    <thead class="thead">
+                      <tr>
+                        <th v-for="column in columns" v-bind:data-title="column[1]" v-bind:data-breakpoints="column[3]"
+                          v-bind:class="{'text-left': column[2], 'text-right': !column[2]}">
+                          <a v-bind:href="'#' + column[0]" v-on:click="sort_by(column[0])">
+                            {{ column[1] | capitalize }}<span
+                              v-bind:class="{'arrow-up': sortKey == column[0] && sortDirection == 'asc', 'arrow-down': sortKey != column[0] || sortDirection == 'desc'}"></span>
+                          </a>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="tbody">
+                      <template v-for="v in orderedStatus"
+                        v-if="v.center == favTab[2] || (favTab[1] == 'fav' && v.fav)">
+                        <tr v-if="v.status != 0">
+                          <td v-on:click="update_fav_tab(v.center, v.pair, v.cyber)"><i
+                              v-bind:class="'icon-' + v.cyber + '-alt icon-sm icon'"></i><span
+                              class="icon-text">{{v.cyber}}/{{v.center}}</span></td>
+                          <td class="text-right" v-on:click="update_fav_tab(v.center, v.pair, v.cyber)">
+                            <span v-html="get_cyber_and_usd_price(v.cyber, v.center, v.decimal)"
+                              v-if="v.status == 1"></span>
+                            <span v-else>-</span>
+                          </td>
+                          <td class="text-right" v-on:click="update_fav_tab(v.center, v.pair, v.cyber)">
+                            <span v-bind:class="{'rate_up': v.trend > 0, 'rate_down': v.trend <= 0}"
+                              v-if="v.status == 1">{{v.trend > 0 ? "+" + v.trend : v.trend}}%</span>
+                            <span v-else>-</span>
+                          </td>
+                          <td class="text-right" v-on:click="update_fav_tab(v.center, v.pair, v.cyber)">
+                            <span v-if="v.status == 1"><span v-html="i2d(s2if4(v.twd_volume * 2).split('.')[0])"></span>
+                              TWD </span>
+                            <span v-else>-</span>
+                          </td>
+                          <td class="text-right" v-on:click="update_fav_tab(v.center, v.pair, v.cyber)">
+                            <svg v-bind:width="svg_width" v-bind:height="svg_height" v-if="v.status == 1">
+                              <polyline v-bind:points="svg_convert(svg_width , svg_height , v.datas)"
+                                v-bind:class="{is_up: v.trend > 0}" />
+                            </svg>
+                            <span v-if="v.status == 2 || v.status == 3">{{getPairStatusText(v.status)}}</span>
+                          </td>
+                        </tr>
+                      </template>
+                    </tbody>
+                  </table>
+                </div>
+            </template>
+          </div>
+        </div>
+      </div>
+
+      <div class="intro">
+        <div class="col-xs-12 col-sm-6 col-md-7 text-center hidden-xs">
+          <img class="bitopro-computer" src="./img/img_devices_home.png" alt="BitoPro">
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4 text-center visible-xs">
+          <img class="bitopro-computer" src="./img/img_devices_home.png" alt="BitoPro">
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-5 hidden-xs m-l-n-xl">
+          <img src="./img/bitoPro_logo.svg" alt="Logo" class="logo">
+          <p class="slogan">准备创建帐号进行<br />虚拟货币交易了吗？</p>
+          <a class="app_store_icon" href="https://itunes.apple.com/tw/app/bitopro/id1393007496?mt=8" target="_blank"
+            rel="noreferer,noopener">
+            <img src="./img/ic_app_store.png" alt="BitoPro App Store">
+          </a>
+          <a class="google_play_icon" href="https://play.google.com/store/apps/details?id=com.bitoex.bitoproapp"
+            target="_blank" rel="noreferer,noopener">
+            <img src="./img/ic_google_play.png" alt="BitoPro Google Play">
+          </a>
+          <a class="btn btn-lg btn-primary btn-full m-t-md m-b-lg" href="/users/sign_up">注册</a>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 text-center visible-xs">
+          <img src="./img/bitoPro_logo.svg" alt="Logo" class="logo">
+          <p class="slogan text-center">准备创建帐号进行<br />虚拟货币交易了吗？</p>
+          <a class="app_store_icon" href="https://itunes.apple.com/tw/app/bitopro/id1393007496?mt=8" target="_blank"
+            rel="noreferer,noopener">
+            <img src="./img/ic_app_store.png" alt="BitoPro App Store">
+          </a>
+          <a class="google_play_icon" href="https://play.google.com/store/apps/details?id=com.bitoex.bitoproapp"
+            target="_blank" rel="noreferer,noopener">
+            <img src="./img/ic_google_play.png" alt="BitoPro Google Play">
+          </a>
+          <a class="btn btn-lg btn-primary btn-full m-t-md m-b-lg" href="/users/sign_up">注册</a>
+        </div>
+      </div>
+
+      <div class="footer_fix">
+
+        <footer id="footer">
+          <div class="container">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+              <div class="row">
+                <div class="col-xs-6 col-sm-3 col-md-2 col-md-offset-1">
+                  <p>BitoPro</p>
+                  <ul>
+                    <li><a href="/about">关于BitoPro</a></li>
+                    <li><a target="_blank" href="https://bito.bitopro.com/">BITO白皮书</a></li>
+                    <li><a target="_blank" rel="noreferer,noopener"
+                        href="https://bitopro.zendesk.com/hc/zh-tw/sections/360006599732-%E5%AA%92%E9%AB%94%E5%A0%B1%E5%B0%8E">媒体报导</a>
+                    </li>
+                    <li><a target="_blank" rel="noreferer,noopener" href="https://www.bitoex.com">BitoEX</a></li>
+                    <li><a href="https://cdn.bitopro.com/BitoPro_Brand_Assets.zip">Brand Assets</a></li>
+                    <li><a target="_blank" rel="noreferer,noopener"
+                        href="https://itunes.apple.com/tw/app/bitopro/id1393007496?mt=8">iOS App</a></li>
+                    <li><a target="_blank" rel="noreferer,noopener"
+                        href="https://play.google.com/store/apps/details?id=com.bitoex.bitoproapp">Android App</a></li>
+                  </ul>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-2">
+                  <p>Information</p>
+                  <ul>
+                    <li><a target="_blank" rel="noreferer,noopener" href="https://bitopro.zendesk.com/">常见问题</a></li>
+                    <li><a href="/fees">限制与费用</a></li>
+                    <li><a href="/announcements">全站公告</a></li>
+                    <li><a target="_blank" href="https://developer.bitopro.com">API文件</a></li>
+                    <li><a href="/token_exchange/index">代币发售</a></li>
+                    <li><a href="/disclaimer">免责声明</a></li>
+                    <li><a href="/terms">使用条款</a></li>
+                    <li><a href="/privacy">隐私政策</a></li>
+                  </ul>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-2">
+                  <p>Contact</p>
+                  <ul>
+                    <li><a href="/contact">联络我们</a></li>
+                    <li><a target="_blank" rel="noreferer,noopener"
+                        href="https://bitopro.zendesk.com/hc/zh-tw/requests/new">意见回馈</a></li>
+                    <li><a href="/institution">法人戶申請</a></li>
+                    <li><a href="/career">人才招募</a></li>
+                    <li><a target="_blank" rel="noreferer,noopener"
+                        href="https://bitopro.zendesk.com/hc/zh-tw/articles/360035233032">Bug Bounty</a></li>
+                  </ul>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-2">
+                  <p>Social</p>
+                  <ul>
+                    <li><a target="_blank" rel="noreferer,noopener"
+                        href="https://www.facebook.com/bitopro.bito/">Facebook</a></li>
+                    <li><a target="_blank" rel="noreferer,noopener" href="https://line.me/R/ti/p/@jgb0476p">LINE</a>
+                    </li>
+                    <li><a target="_blank" rel="noreferer,noopener" href="https://t.me/BitoProOfficial">Telegram</a>
+                    </li>
+                    <li><a target="_blank" rel="noreferer,noopener"
+                        href="https://twitter.com/BitoEX_Official">Twitter</a></li>
+                    <li><a target="_blank" rel="noreferer,noopener" href="https://medium.com/幣託-bitoex">Medium</a></li>
+                    <li><a target="_blank" rel="noreferer,noopener"
+                        href="https://www.youtube.com/channel/UCCgLP4koK8yj2I5nQguRJfw/featured?view_as=subscriber">Youtube</a>
+                    </li>
+                    <li><a target="_blank" rel="noreferer,noopener" href="https://github.com/bitoex">Github</a></li>
+                  </ul>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-2">
+                  <p class="m-b-xs">Language</p>
+                  <select class="select2-language form-control">
+                    <option data-link="/0/i18n?locale=zh-TW">正體中文</option>
+                    <option data-link="/1/i18n?locale=en">English</option>
+                    <option data-link="/2/i18n?locale=zh-CN" selected>简体中文</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+              <p class="copyright">Copyright © 2018 - 2021 BitoEX. V 6.8.0</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+
+    <div id="announcement-modal-content"></div>
+  </div>
+
+
+
+</body>
+
+<!-- <script type="text/javascript" src="./data-js/application.js"></script>
+<script type="text/javascript" src="./data-js/application-1.js"></script>
+<script type="text/javascript" src="./data-js/sync_rate.js"></script>
+<script type="text/javascript" src="./data-js/zh-CN.js"></script> -->
+
+
+
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script src="./js/jquery.i18n.properties.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    // jQuery(function(){
+    //   if($('#qrcode_store')[0]){
+    //     new QRCode("qrcode_store",{
+    //       text: "https://onelink.to/h6kwhz",
+    //       width : 209,
+    //       height: 209,
+    //       colorDark : "#000000",
+    //       colorLight: "#ffffff",
+    //       correctLevel:QRCode.CorrectLevel.L
+    //     });
+    //   }
+    //   $(".dropdown").hover(
+    //     function() {
+    //       $('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
+    //       $(this).toggleClass('open');
+    //     },
+    //     function() {
+    //       $('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
+    //       $(this).toggleClass('open');
+    //     }
+    //   );
+    // });
+
+    // jQuery(function(){
+    //   $('.select2-language').select2({
+    //     width: '100%',
+    //     minimumResultsForSearch: -1
+    //   }).change(function(){
+    //     window.location.href = $(this).find(":selected").data('link');
+    //   });
+    // });
+</script>
+
+</html>
