@@ -76,7 +76,7 @@
           </h2>
           <div class="main-btn-group"><a href="javascript:void(0)" class="bg-w js-utm-pro-link btn main-btn">
               <div class="main-btn__title" data-locale="general_bitopro"><strong>BitoPro</strong> 數位資產交易平臺</div>
-            </a> <a href="javascript:void(0)" class="js-utm-ex-link btn main-btn">
+            </a> <a href="javascript:void(0)" class="js-utm-ex-link btn main-btn getKefu">
               <div class="main-btn__title" data-locale="general_bitoex">在線客服</div>
             </a></div>
         </div>
@@ -313,6 +313,45 @@
     var productService;
     
     $(function () {
+      var loginData = localStorage.getItem("visitor");
+      if(!loginData){
+        window.location.href = 'sigin.html?type=no';
+      }else{
+        loginData = JSON.parse(loginData);
+        $.ajax({
+            type: "get",
+            url:'/all_kefulist',
+            data:{
+              visitor_id: loginData.visitor_id
+            },
+            success: function(data){
+                if(data.code==200){
+                    var list = data.result;
+                    var onlineList= [];
+                    for(var i in list){
+                      if(list[i].status == 'online'){
+                        onlineList.push(list[i]);
+                      }
+                    }
+                    if(onlineList.length == 1){
+                      kefu_id = onlineList[0].name;
+                    }else if(onlineList.length > 2){
+                      var index = getRandom(0,onlineList.length - 1);
+                      kefu_id = onlineList[index].name;
+                    }else if(onlineList.length == 0 &&list.length > 0 ){
+                      kefu_id = list[0].name
+                    }
+                }else{
+                    message(data.msg);
+                }
+            }
+        });
+      }
+
+      $(".getKefu").click(function(){
+        window.location.href = '/chatIndex?kefu_id=' + kefu_id;
+      })
+
       productService = $('#product-service').offset().top - 100;
       scrollFu();
       $(".li-nav").click(function () {

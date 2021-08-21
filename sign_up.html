@@ -43,6 +43,21 @@
     .form-group.error .form-error{
       display:block;
     }
+
+    .message{
+      position: fixed;
+      background: rgba(0,0,0,.4);
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+      font-size: 14px;
+      color: #fff;
+      padding: 5px 10px;
+      z-index: 10;
+      min-width: 100px;
+      text-align: center;
+    }
   </style>
 </head>
 
@@ -93,8 +108,11 @@
 
                 <div class="form-group">
                   <label for="referrer_code">推薦人ID (選填)</label>
-                  <input type="number" id="referrer_code" class="form-control"
-                    placeholder="推薦人ID (選填)" />
+                  <div class="form-group required ">
+                    <input type="number" id="referrer_code" class="form-control"
+                      placeholder="推薦人ID (選填)" />
+                    <div class="form-error"></div> 
+                  </div>
                 </div>
 
                 <div class="form-group captcha-group">
@@ -105,16 +123,12 @@
 
                 <div class="text-center">
                   <p class="google-recaptcha-comment">本頁面受 reCAPTCHA 機制保護，並遵守 Google 
-                    <!-- <a
-                      href="https://policies.google.com/privacy" target='_blank' rel='noreferer,noopener'>隱私權政策</a> 及 <a
-                      href="https://policies.google.com/terms" target='_blank' rel='noreferer,noopener'>服務條款</a></p> -->
-
                   <p>
                     註冊帳號代表您同意
                   </p>
                 </div>
 
-                <input type="submit" value="注册" class="btn btn-block btn-primary m-b m-t-sm" />
+                <input id="submit" value="注册" class="btn btn-block btn-primary m-b m-t-sm" />
               </form>
               <p class="text-center">
                 已經有帳號嗎？ <a href="./sigin.html">登入</a>
@@ -160,11 +174,33 @@
         
       })
       $('#submit').click(function(){
-          if(validateEmail() && validatePassword()){
-            alert('登录')
-          }else{
-            return false;
-          }
+        if(validateEmail() && validatePassword() && validateCode()){
+          var user_password = $('#user_password').val();
+          var user_email = $('#user_email').val();
+          var referrer_code = $('#referrer_code').val();
+          $.ajax({
+            type: "post",
+            url:'/visitor_register',
+            data:{
+              name: user_email,
+              pwd: user_password,
+              invite_code: referrer_code
+            },
+            success: function(data){
+              if(data.code==200){
+                message('注册成功');
+                localStorage.setItem("visitor",JSON.stringify(data.result));
+                setTimeout(function(){
+                  window.location.href = './index.html';
+                },1000)
+              }else{ 
+                message(data.msg)
+              }
+            }
+          })
+        }else{
+          return false;
+        }
         
       })
       $('#user_email').blur(function(){
@@ -173,9 +209,21 @@
       $('#user_password').blur(function(){
         validatePassword();
       });
+      $('#referrer_code').blur(function(){
+        validateCode();
+      });
       // .form-error
     })
-
+    
+    function validateCode(){
+      if(user_email == ''){
+        errorInput($('#referrer_code'),'请输入邀请码');
+        return false;
+      }else{
+        errorRemove($('#user_email'));
+        return true;
+      }
+    }
     function validateEmail(){
       var user_email = $('#user_email').val();
       var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
@@ -219,6 +267,16 @@
         $('.form-group.required').removeClass('error');
         $('.form-group.required').find('.form-error').html('')
       }
+    }
+
+    function message(text){
+      var div = document.createElement('div');
+      div.className = 'message';
+      div.innerHTML = text;
+      $('body').append(div);
+      setTimeout(function(){
+        div.remove();
+      },2000)
     }
   </script>
 </body>

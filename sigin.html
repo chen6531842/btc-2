@@ -39,6 +39,20 @@
     .form-group.error .form-error{
       display:block;
     }
+    .message{
+      position: fixed;
+      background: rgba(0,0,0,.4);
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+      font-size: 14px;
+      color: #fff;
+      padding: 5px 10px;
+      z-index: 10;
+      min-width: 100px;
+      text-align: center;
+    }
     
   </style>
 </head>
@@ -114,6 +128,10 @@
 
   <script type="text/javascript">
     $(function(){
+      var type = query('type');
+      if(type == 'no'){
+        message('请先登录');
+      }
       var isPassword = true;
       $('#js-password-show-hide').click(function(){
         
@@ -132,7 +150,29 @@
       })
       $('#submit').click(function(){
           if(validateEmail() && validatePassword()){
-            alert('登录')
+            
+            var user_password = $('#user_password').val();
+            var user_email = $('#user_email').val();
+            $.ajax({
+              type: "post",
+              url:'/visitor_check_login',
+              data:{
+                name: user_email,
+                pwd: user_password,
+              },
+              success: function(data){
+                if(data.code==200){
+                  message('登录成功');
+                  localStorage.setItem("visitor",JSON.stringify(data.result));
+                  setTimeout(function(){
+                    window.location.href = './index.html';
+                  },1000)
+                }else{ 
+                  message(data.msg)
+                }
+              }
+            })
+            return false;
           }else{
             return false;
           }
@@ -190,6 +230,19 @@
         $('.form-group.required').removeClass('error');
         $('.form-group.required').find('.form-error').html('')
       }
+    }
+    function message(text){
+      var div = document.createElement('div');
+      div.className = 'message';
+      div.innerHTML = text;
+      $('body').append(div);
+      setTimeout(function(){
+        div.remove();
+      },2000)
+    }
+
+    function query(name) {
+      return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.href) || [, ''])[1].replace(/\+/g, '%20')) || ''
     }
   </script>
 
