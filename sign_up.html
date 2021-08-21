@@ -18,118 +18,49 @@
   <meta property="og:site_name" content="BitoPro">
   <meta property="og:type" content="website" />
   <meta property="og:title" content="BitoPro 台湾币托交易所">
-  <!-- <meta property="og:url" content="https://www.bitopro.com">
-  <meta property="og:description" content="BitoPro 是最值得信赖的数位货币交易平台">
-  <meta property="og:image" content="https://cdn.bitopro.com/images/index/index_share_facebook_image.png" />
-  <meta property="og:image:url" content="https://cdn.bitopro.com/images/index/index_share_facebook_image.png" />
-  <meta property="og:image:secure_url" content="https://cdn.bitopro.com/images/index/index_share_facebook_image.png" />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-
-  <meta name="twitter:site" content="@BitoPro">
-  <meta name="twitter:creator" content="@BitoPro">
-  <meta name="twitter:title" content="BitoPro 台湾币托交易所">
-  <meta name="twitter:description" content="BitoPro 是最值得信赖的数位货币交易平台">
-  <meta name="twitter:image" content="https://cdn.bitopro.com/images/index_share_facebook_image.png">
-
-  <meta name="apple-mobile-web-app-capable" content="no" />
-  <meta name="mobile-web-app-capable" content="no">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="BitoPro">
-
-  <meta name="apple-touch-fullscreen" content="no" />
-
-  <meta name="smartbanner:title" content="BitoPro虚拟货币交易所">
-  <meta name="smartbanner:author" content="Bitoex LTD">
-  <meta name="smartbanner:price" content="点击进入">
-  <meta name="smartbanner:price-suffix-apple" content="App Store">
-  <meta name="smartbanner:price-suffix-google" content="Google Play">
-  <meta name="smartbanner:icon-apple" content="https://cdn.bitopro.com/images/bitopro_smartbanner.png">
-  <meta name="smartbanner:icon-google" content="https://cdn.bitopro.com/images/bitopro_smartbanner.png">
-  <meta name="smartbanner:button" content="开启">
-  <meta name="smartbanner:button-url-apple" content="https://apps.apple.com/app/id1393007496">
-  <meta name="smartbanner:button-url-google"
-    content="https://play.google.com/store/apps/details?id=com.bitoex.bitoproapp">
-  <meta name="smartbanner:enabled-platforms" content="android,ios">
-  <meta name="smartbanner:close-label" content="关闭">
-
-  <meta name="format-detection" content="telephone=no">
-
-
-  <meta name="csrf-param" content="authenticity_token" />
-  <meta name="csrf-token"
-    content="0QfzDYtnvZPnKAhdRUlNHRyxYAJGBJf1nYVAF9pafOIU4gAypXq74uPnf4hR1U2tWRMY6A1S7qSC6+61PPnIyA==" />
-  <meta name="csp-nonce" /> -->
-
-
-
   <link rel="stylesheet" media="all"
     href="./css/sign_up.css" />
-
+  <style>
+    #new_user{
+      margin-top: 50px;
+    }
+    .help-box{
+      margin-top: 40px;
+      text-align: right;
+    }
+    .form-group.required{
+      position: relative;
+    }
+    .form-group.error .form-control {
+        border: 1px dotted #e4323a !important;
+    }
+    .form-error{
+      position: absolute;
+      color: #e4323a;
+      display: none;
+      font-size: 12px;
+    }
+    .form-group.error .form-error{
+      display:block;
+    }
+  </style>
 </head>
 
 
 
 <body>
-  <div class="body-wrapper" id="zone" v-cloak data-ws="wss://www.bitopro.com/ws/usdt_twd" data-ws-kind="usdt_twd"
-    data-cyber="usdt" data-center="twd" data-env="production">
-
+  <div class="body-wrapper" id="zone" >
     <nav id="header" class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
           <a href="/" class="navbar-brand">
-            <img class="site-logo" src="https://cdn.bitopro.com/images/bitoPro_logo.svg" alt="Logo">
+            <img class="site-logo" src="./img/bitoPro_logo.svg" alt="Logo">
           </a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav pull-right m-t-xs">
-            <li class="dropdown">
-              <a href="#">
-                简体中文
-                <i class="caret"></i>
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="/0/i18n?locale=zh-TW">正體中文</a>
-                  <a href="/1/i18n?locale=en">English</a>
-                  <a href="/2/i18n?locale=zh-CN">简体中文</a>
-                </li>
-              </ul>
-            </li>
-            <li class="separation">|</li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-mobile-alt fa-large"></i></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <p class="download-app-title">扫描下载 BitoPro APP</p>
-                  <p id="qrcode_store"></p>
-                  <p class="download-app-desc">同步支援 iOS 与 Andorid 系统</p>
-                </li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i
-                  class="fas fa-question-circle fa-large"></i></a>
-              <ul class="dropdown-menu">
-                <li><a href="https://bitopro.zendesk.com/hc/zh-tw" target="_blank" rel="noreferer,noopener"
-                    title="BitoPro 常见问题">常见问题 <i class="fas fa-external-link-alt m-l-xs"></i></a></li>
-                <li>
-                  <a href="/fees">限制与费用</a>
-                </li>
-                <li><a href="/contact" title="BitoPro 联络我们">联络我们</a></li>
-              </ul>
-            </li>
-          </ul>
         </div>
       </div>
     </nav>
 
     <div class="container">
-
-
-
-
       <div class="row">
         <div class="col-xs-12 col-lg-6 col-lg-offset-3">
           <div class="ibox">
@@ -139,66 +70,54 @@
                   注册</h2>
               </div>
 
-              <ul class="nav login-tabs">
-                <li class="login-tabs__item active"><a id="js-personal" data-toggle="tab" aria-current="page"
-                    href="#new_user">個人</a></li>
-
-                <li class="login-tabs__item"><a id="js-corporation" data-toggle="tab" href="#new_user">法人戶</a></li>
-              </ul>
-
-              <form class="simple_form tab-pane fade in active" id="new_user" novalidate="novalidate" action="/users"
-                accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token"
-                  value="sjQPOz+WP+OahY24VVsn/qGl+TuKYaf9B5THiu7AVbkO2JVDYhk4mQnwV04apH84mvHqX+hda9UdUFPeBkAiaA==" />
-
-                <input type="hidden" name="kind" id="js-registration-kind" value="personal" />
-
+              <form class="simple_form tab-pane fade in active" id="new_user" >
                 <div class="form-group">
                   <div class="form-group email required user_email"><label class="email required"
-                      for="user_email">电子邮件</label><input class="form-control string email required" required="required"
-                      aria-required="true" placeholder="请输入电子信箱" type="email" value="" name="user[email]"
+                      for="user_email">电子邮件</label>
+                      <input class="form-control string email required" required="required"
+                      placeholder="请输入电子信箱" type="email" value=""
                       id="user_email" /></div>
+                  <div class="form-error"></div>  
                 </div>
 
                 <div class="form-group">
-                  <div class="form-group password required user_password" aria-required="true">
-                    <label for="user_password" class="password required" aria-required="true">密碼</label>
+                  <div class="form-group password required user_password">
+                    <label for="user_password" class="password required">密碼</label>
                     <div class="password-show-hide-wrapper">
-                      <input required="required" aria-required="true" placeholder="请输入密码" type="password"
-                        name="user[password]" id="user_password" class="form-control password required">
-                      <i id="js-password-show-hide" class="fa fa-eye-slash password-show-hide-wrapper__icon"
-                        aria-hidden="true"></i>
+                      <input required="required" placeholder="请输入密码" type="password" id="user_password" class="form-control password required">
+                      <i id="js-password-show-hide" class="fa fa-eye-slash password-show-hide-wrapper__icon"></i>
                     </div>
+                    <div class="form-error"></div> 
                   </div>
                 </div>
 
                 <div class="form-group">
-                  <label for="referrer_code" aria-required="true">推荐人ID (必填)</label>
-                  <input type="number" name="referrer_code" id="referrer_code" class="form-control"
-                    placeholder="推荐人ID (必填)" />
+                  <label for="referrer_code">推荐人ID (选填)</label>
+                  <input type="number" id="referrer_code" class="form-control"
+                    placeholder="推荐人ID (选填)" />
                 </div>
 
                 <div class="form-group captcha-group">
                   
-                  <input type="hidden" name="g-recaptcha-response-data[signup]" id="g-recaptcha-response-data-signup"
-                    data-sitekey="6LdP6DAaAAAAAGw9uUFJ2O4TQ1tKy6uoulNsG8Zf" class="g-recaptcha g-recaptcha-response " />
+                  <input type="hidden" id="g-recaptcha-response-data-signup" class="g-recaptcha g-recaptcha-response " />
 
                 </div>
 
                 <div class="text-center">
-                  <p class="google-recaptcha-comment">本頁面受 reCAPTCHA 機制保護，並遵守 Google <a
+                  <p class="google-recaptcha-comment">本頁面受 reCAPTCHA 機制保護，並遵守 Google 
+                    <!-- <a
                       href="https://policies.google.com/privacy" target='_blank' rel='noreferer,noopener'>隱私權政策</a> 及 <a
-                      href="https://policies.google.com/terms" target='_blank' rel='noreferer,noopener'>服務條款</a></p>
+                      href="https://policies.google.com/terms" target='_blank' rel='noreferer,noopener'>服務條款</a></p> -->
 
                   <p>
-                    注册帐号代表您同意 <a href='/terms' target='_blank'>使用条款</a>
+                    注册帐号代表您同意
                   </p>
                 </div>
 
-                <input type="submit" name="commit" value="注册" class="btn btn-block btn-primary m-b m-t-sm"
-                  data-disable-with="处理中..." />
+                <input type="submit" value="注册" class="btn btn-block btn-primary m-b m-t-sm" />
               </form>
               <p class="text-center">
-                已經有帳號嗎？ <a href="/users/sign_in">登入</a>
+                已經有帳號嗎？ <a href="./sigin.html">登入</a>
               </p>
             </div>
           </div>
@@ -211,76 +130,10 @@
     <footer id="footer">
       <div class="container">
         <div class="col-xs-12 col-sm-12 col-md-12">
-          <div class="row">
-            <div class="col-xs-6 col-sm-3 col-md-2 col-md-offset-1">
-              <p>BitoPro</p>
-              <ul>
-                <li><a href="/about">关于BitoPro</a></li>
-                <li><a target="_blank" href="https://bito.bitopro.com/">BITO白皮书</a></li>
-                <li><a target="_blank" rel="noreferer,noopener"
-                    href="https://bitopro.zendesk.com/hc/zh-tw/sections/360006599732-%E5%AA%92%E9%AB%94%E5%A0%B1%E5%B0%8E">媒体报导</a>
-                </li>
-                <li><a target="_blank" rel="noreferer,noopener" href="https://www.bitoex.com">BitoEX</a></li>
-                <li><a href="https://cdn.bitopro.com/BitoPro_Brand_Assets.zip">Brand Assets</a></li>
-                <li><a target="_blank" rel="noreferer,noopener"
-                    href="https://itunes.apple.com/tw/app/bitopro/id1393007496?mt=8">iOS App</a></li>
-                <li><a target="_blank" rel="noreferer,noopener"
-                    href="https://play.google.com/store/apps/details?id=com.bitoex.bitoproapp">Android App</a></li>
-              </ul>
-            </div>
-            <div class="col-xs-6 col-sm-3 col-md-2">
-              <p>Information</p>
-              <ul>
-                <li><a target="_blank" rel="noreferer,noopener" href="https://bitopro.zendesk.com/">常见问题</a></li>
-                <li><a href="/fees">限制与费用</a></li>
-                <li><a href="/announcements">全站公告</a></li>
-                <li><a target="_blank" href="https://developer.bitopro.com">API文件</a></li>
-                <li><a href="/token_exchange/index">代币发售</a></li>
-                <li><a href="/disclaimer">免责声明</a></li>
-                <li><a href="/terms">使用条款</a></li>
-                <li><a href="/privacy">隐私政策</a></li>
-              </ul>
-            </div>
-            <div class="col-xs-6 col-sm-3 col-md-2">
-              <p>Contact</p>
-              <ul>
-                <li><a href="/contact">联络我们</a></li>
-                <li><a target="_blank" rel="noreferer,noopener"
-                    href="https://bitopro.zendesk.com/hc/zh-tw/requests/new">意见回馈</a></li>
-                <li><a href="/institution">法人戶申請</a></li>
-                <li><a href="/career">人才招募</a></li>
-                <li><a target="_blank" rel="noreferer,noopener"
-                    href="https://bitopro.zendesk.com/hc/zh-tw/articles/360035233032">Bug Bounty</a></li>
-              </ul>
-            </div>
-            <div class="col-xs-6 col-sm-3 col-md-2">
-              <p>Social</p>
-              <ul>
-                <li><a target="_blank" rel="noreferer,noopener"
-                    href="https://www.facebook.com/bitopro.bito/">Facebook</a></li>
-                <li><a target="_blank" rel="noreferer,noopener" href="https://line.me/R/ti/p/@jgb0476p">LINE</a></li>
-                <li><a target="_blank" rel="noreferer,noopener" href="https://t.me/BitoProOfficial">Telegram</a></li>
-                <li><a target="_blank" rel="noreferer,noopener" href="https://twitter.com/BitoEX_Official">Twitter</a>
-                </li>
-                <li><a target="_blank" rel="noreferer,noopener" href="https://medium.com/幣託-bitoex">Medium</a></li>
-                <li><a target="_blank" rel="noreferer,noopener"
-                    href="https://www.youtube.com/channel/UCCgLP4koK8yj2I5nQguRJfw/featured?view_as=subscriber">Youtube</a>
-                </li>
-                <li><a target="_blank" rel="noreferer,noopener" href="https://github.com/bitoex">Github</a></li>
-              </ul>
-            </div>
-            <div class="col-xs-6 col-sm-3 col-md-2">
-              <p class="m-b-xs">Language</p>
-              <select class="select2-language form-control">
-                <option data-link="/0/i18n?locale=zh-TW">正體中文</option>
-                <option data-link="/1/i18n?locale=en">English</option>
-                <option data-link="/2/i18n?locale=zh-CN" selected>简体中文</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
           <p class="copyright">Copyright © 2018 - 2021 BitoEX. V 6.8.0</p>
+          <div class="help-box">
+            <button class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-question-sign"></i>帮助</button>
+          </div>
         </div>
       </div>
     </footer>
@@ -288,99 +141,85 @@
 
 
   <script type="text/javascript" src="./js/jquery.min.js"></script>
-  <script src="./js/jquery.i18n.properties.min.js"></script>
-  <script src="./js/bootstrap.min.js"></script>
   <script type="text/javascript">
-  //     jQuery(function () {
-  //       toastr_get_storge("msg")
+    $(function(){
+      var isPassword = true;
+      $('#js-password-show-hide').click(function(){
+        
+        if(isPassword){
+          isPassword = false;
+          $('#user_password').attr('type','text');
+          $(this).removeClass('fa-eye-slash')
+          $(this).addClass('fa-eye')
+        }else{
+          isPassword = true;
+          $('#user_password').attr('type','password');
+          $(this).removeClass('fa-eye')
+          $(this).addClass('fa-eye-slash')
+        }
+        
+      })
+      $('#submit').click(function(){
+          if(validateEmail() && validatePassword()){
+            alert('登录')
+          }else{
+            return false;
+          }
+        
+      })
+      $('#user_email').blur(function(){
+        validateEmail();
+      }); 
+      $('#user_password').blur(function(){
+        validatePassword();
+      });
+      // .form-error
+    })
 
-  //       const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/
+    function validateEmail(){
+      var user_email = $('#user_email').val();
+      var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+ 6       
+      if(user_email == ''){
+        errorInput($('#user_email'),'请输入电子邮箱');
+        return false;
+      }else if(!myreg.test(user_email)){
+        errorInput($('#user_email'),'请输入有效的电子邮箱');
+        return false;
+      }else{
+        errorRemove($('#user_email'));
+        return true;
+      }
+    }
 
-  //       $.validator.addMethod("password", function (value, element) {
-  //         return regex.test(value)
-  //       }, '密码最少8码，至少大小写英文各1跟数字');
+    function validatePassword(){
+      var myreg = /^(?![0-9]+$)(?![a-z]+$)(?![A-Z]+$)(?!([^(0-9a-zA-Z)])+$)^.{8,16}$/;   
+      var user_password = $('#user_password').val();
+      if(user_password == ''){
+        errorInput($('#user_password'),'请输入密码');
+        return false;
+      }else if(!myreg.test(user_password)){
+        errorInput($('#user_password'),'密码最少8-16码，至少大小写英文各1跟数字');
+        return false;
+      }else{
+        errorRemove($('#user_password'));
+        return true;
+      }
+    }
 
-  //       $("#new_user").validate({
-  //         rules: {
-  //           "email": {
-  //             required: true,
-  //           },
-  //           "password": {
-  //             required: true,
-  //           },
-  //         },
-  //         messages: {
-  //           "email": {
-  //             required: '请输入电子信箱'
-  //           },
-  //           "password": {
-  //             required: '请输入密码'
-  //           }
-  //         }
-  //       });
-  //     });
-
-  //   $(document).ready(function() {
-  //     $("#js-password-show-hide").click(function() {
-  //       if ($("#user_password").attr("type") == "password") {
-  //         $("#user_password").attr("type", "text")
-  //         $("#js-password-show-hide").removeClass("fa-eye-slash");
-  //         $("#js-password-show-hide").addClass("fa-eye");
-  //       } else {
-  //         $("#user_password").attr("type", "password")
-  //         $("#js-password-show-hide").removeClass("fa-eye");
-  //         $("#js-password-show-hide").addClass("fa-eye-slash");
-  //       }
-  //     });
-  //   })
-
-  // $(document).ready(function() {
-  //   $( "#js-personal" ).click(function() {
-  //     $("#js-registration-kind").val("personal")
-  //   });
-
-  //   $( "#js-corporation" ).click(function() {
-  //     $("#js-registration-kind").val("corporation")
-  //   });
-
-  //   if (location.search.includes("corporation")){
-  //     $("#js-registration-kind").val("corporation")
-  //   }else{
-  //     $("#js-registration-kind").val("personal")
-  //   }
-  // })
-
-  //   jQuery(function(){
-  //     if($('#qrcode_store')[0]){
-  //       new QRCode("qrcode_store",{
-  //         text: "https://onelink.to/h6kwhz",
-  //         width : 209,
-  //         height: 209,
-  //         colorDark : "#000000",
-  //         colorLight: "#ffffff",
-  //         correctLevel:QRCode.CorrectLevel.L
-  //       });
-  //     }
-  //     $(".dropdown").hover(
-  //       function() {
-  //         $('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
-  //         $(this).toggleClass('open');
-  //       },
-  //       function() {
-  //         $('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
-  //         $(this).toggleClass('open');
-  //       }
-  //     );
-  //   });
-
-  //   jQuery(function(){
-  //     $('.select2-language').select2({
-  //       width: '100%',
-  //       minimumResultsForSearch: -1
-  //     }).change(function(){
-  //       window.location.href = $(this).find(":selected").data('link');
-  //     });
-  //   });
+    function errorInput(div,text){
+      div.closest('.form-group').addClass('error');
+      div.closest('.form-group').find('.form-error').html(text)
+    }
+    function errorRemove(div){
+      if(div){
+        div.closest('.form-group').removeClass('error');
+        div.closest('.form-group').find('.form-error').html('')
+      }else{
+        $('.form-group.required').removeClass('error');
+        $('.form-group.required').find('.form-error').html('')
+      }
+    }
   </script>
 </body>
 

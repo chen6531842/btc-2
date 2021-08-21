@@ -1,1 +1,671 @@
-.carousel-indicators{width:100%;left:0;bottom:0;top:460px;height:220px;padding:63px 0 0 0;margin:0;text-align:center;color:#fff;background-image:linear-gradient(to bottom, transparent, #000 50%, #000)}.carousel-indicators li{width:240px;height:136px;border-radius:0;margin:0 30px;border:1px solid #004160}.carousel-indicators .active{border:1px solid #0096e9;box-shadow:0 0 4px 1px rgba(0,150,233,0.5)}.carousel-inner>img{margin:auto}.carousel-inner>.item>img{width:fit-content;margin:0 auto}.carousel-inner .bg-1{height:606px;background-color:#000}.carousel-inner .bg-2{height:606px;background-image:url("https://cdn.bitopro.com/images/debt/index_bitodebt_bg_bitopro_fix.png")}.carousel-inner .bg-3{height:606px}.carousel-inner>.item.bg-3>.sub-bg-3>.welcome-btns>img{position:absolute;right:85px;top:-28px}#index .fa{cursor:pointer}#index .table>thead>tr>th{border-bottom:1px solid #4f5052}#index .table-striped>tbody>tr:nth-of-type(odd){background-color:rgba(255,255,255,0.05)}#index .banner{background-color:#000;width:100%}#index .welcome-btns{position:absolute;width:960px;color:#fff;margin:auto;top:18%;bottom:0;left:0;right:0}#index .welcome-btns .awesome{color:#ffb822}#index .welcome-btns .title-1{color:#fff;font-size:44px;font-weight:300;line-height:54px}#index .welcome-btns .title-2{color:#fff;font-size:44px;font-weight:300;line-height:54px}#index .welcome-btns .title-3{color:#fff;font-size:58.5px;margin-bottom:24px;font-weight:300;line-height:38px}#index .welcome-btns .sub-title{line-height:30px;font-size:22px}#index .welcome-btns .btn{min-width:180px;font-size:16px;padding:10px 26px}#index .welcome-btns .btn-width{width:289px;font-size:16px}#index .banner-1{background:url("https://cdn.bitopro.com/images/index/index_img_bitopro_banner.png");font-size:48px;font-weight:900;text-indent:0}#index .banner-2{background:url("https://cdn.bitopro.com/images/debt/index_bitodebt_banner_bitopro.png");font-size:34px;font-weight:600;text-indent:0}#index .banner-3{background:url(../img/matic-web-button-58cc93ee55291654611c2ad5a29c2e5cc9336fd1415132dc18370321438feb33.png);font-size:36px;font-weight:600;text-indent:0}#index .banner-3 .small-text{font-size:24px}#index .rate{background-image:linear-gradient(to top, transparent, #000 50%, #000);padding-top:120px}#index .rate .rate-block{width:961px;height:100%;margin:0 auto}#index .rate .rate-block .rate-title .nav-tabs{text-align:center;border-bottom:1px solid #fff;padding:0px 2px}#index .rate .rate-block .rate-title .nav-tabs>li>a,#index .rate .rate-block .rate-title .nav-tabs>li>a:hover,#index .rate .rate-block .rate-title .nav-tabs>li>a:focus{background-color:transparent;border:0;padding:10px 64px;color:#fff}#index .rate .rate-block .rate-title .nav-tabs>li.active>a,#index .rate .rate-block .rate-title .nav-tabs>li.active>a:hover,#index .rate .rate-block .rate-title .nav-tabs>li.active>a:focus{background-color:transparent;border:0;color:#fff;border-bottom:4px solid #fff}#index .rate .rate-block .rate-content{max-height:506px;overflow-y:scroll}#index .rate .rate-block .rate-content a,#index .rate .rate-block .rate-content a:active,#index .rate .rate-block .rate-content a:hover,#index .rate .rate-block .rate-content a:focus{color:#fff}#index .rate .rate-block .rate-content .table .table{background-color:transparent}#index .rate .rate-block .rate-content .table>thead>tr>th{height:46px}#index .rate .rate-block .rate-content .table>tbody>tr>td{border:1px solid transparent;height:46px;cursor:pointer}#index .rate .rate-block .rate-content .icon-text{padding-left:10px;vertical-align:middle}#index .rate .rate-block .rate-content .rate_up{color:#05c900}#index .rate .rate-block .rate-content .rate_down{color:#e4323a}#index .intro{width:960px;margin:0 auto;margin-top:160px}#index .intro .logo{width:191px;height:48px}#index .intro .slogan{font-size:24px;color:#fff;margin:8px 0 16px 0}#index .intro .bitopro-computer{position:relative;top:-70px}#index .intro .btn-full{width:297px;height:46px;font-size:16px}#index .mobile-btns{margin-top:24px}#index .app_store_icon{margin-right:8px}#index .google_play_icon{display:inline-block}svg polyline{fill:none;stroke:#e4323a;stroke-width:1}svg polyline.is_up{fill:none;stroke:#05c900;stroke-width:1}#index .fa{cursor:pointer}#index .table>thead>tr>th{border-bottom:1px solid #4f5052}#index .table-striped>tbody>tr:nth-of-type(odd){background-color:rgba(255,255,255,0.05)}#index .banner{background-color:#000;width:100%}#index .welcome-btns{position:absolute;width:960px;color:#fff;margin:auto;top:18%;bottom:0;left:0;right:0}#index .welcome-btns .bg{background-repeat:no-repeat;background-position:center;height:669px}#index .welcome-btns .title{color:#fff;font-size:36px;font-weight:300;line-height:54px}#index .welcome-btns .stake-info-block{width:289px;margin-top:24px;color:#26bdff}#index .welcome-btns .stake-info-block .stake-info{width:132px;float:left}#index .welcome-btns .stake-info-block .stake-info .s-title{display:block;font-size:14px;margin-bottom:4px}#index .welcome-btns .stake-info-block .stake-info .s-amount{font-size:20px}#index .welcome-btns .stake-info-block .stake-stick{width:1px;height:34px;background:rgba(38,189,255,0.4);float:left;margin:6px 12px 0 12px;vertical-align:middle}#index .welcome-btns .stake-info-block .stake-info:last-child{padding-left:15px}html:lang(en) #index .welcome-btns .stake-info-block .stake-stick{height:54px}#index .carousel-indicators{width:100%;left:0;bottom:0;top:490px;height:220px;margin:0;text-align:center;color:#fff;background-image:linear-gradient(to bottom, transparent, #000 50%, #000)}#index .carousel-indicators li{width:240px;height:136px;border-radius:0;margin:0 30px;border:1px solid #004160;background-size:cover}#index .carousel-indicators .active{border:1px solid #0096e9;box-shadow:0 0 4px 1px rgba(0,150,233,0.5)}#index .carousel-indicators .title{font-size:26px;line-height:34px;padding-top:10px}#index .rate .table-responsive{overflow-x:hidden}#index .rate .rate-block .rate-title .nav-tabs{text-align:center;border-bottom:1px solid #fff;padding:0px 4px}#index .rate .rate-block .rate-title .nav-tabs>li>a,#index .rate .rate-block .rate-title .nav-tabs>li>a:hover,#index .rate .rate-block .rate-title .nav-tabs>li>a:focus{background-color:transparent;border:0;padding:10px 64px;color:#fff}#index .rate .rate-block .rate-title .nav-tabs>li.active>a,#index .rate .rate-block .rate-title .nav-tabs>li.active>a:hover,#index .rate .rate-block .rate-title .nav-tabs>li.active>a:focus{background-color:transparent;border:0;color:#fff;border-bottom:4px solid #fff}#index .rate .rate-block .rate-content{max-height:506px;overflow-y:scroll}#index .rate .rate-block .rate-content a,#index .rate .rate-block .rate-content a:active,#index .rate .rate-block .rate-content a:hover,#index .rate .rate-block .rate-content a:focus{color:#fff}#index .rate .rate-block .rate-content .table .table{background-color:transparent}#index .rate .rate-block .rate-content .table>thead>tr>th{height:46px}#index .rate .rate-block .rate-content .table>tbody>tr>td{border:1px solid transparent;height:46px}#index .rate .rate-block .rate-content .icon-text{padding-left:10px;vertical-align:middle}#index .rate .rate-block .rate-content .rate_up{color:#05c900}#index .rate .rate-block .rate-content .rate_down{color:#e4323a}#index .intro{width:960px;margin:0 auto;margin-top:110px;margin-bottom:490px}#index .intro .logo{width:191px;height:48px}#index .intro .slogan{font-size:24px;color:#fff;margin:8px 0 16px 0}#index .intro .bitopro-computer{position:relative;top:-70px}#index .intro .btn-full{width:315px;height:46px;font-size:16px}#index .mobile-btns{margin-top:24px}#index .app_store_icon{margin-right:8px}#index .banner-1,.banner-2,.banner-3{overflow:hidden}#index .banner-2{position:relative}#index .banner-end{font-size:14px;font-weight:800;width:110px;background:#0096DF;position:absolute;top:14px;left:-30px;text-align:center;letter-spacing:2px;color:#f0f0f0;transform:rotate(-45deg);-webkit-transform:rotate(-45deg)}@media screen and (max-width: 991px){#index .carousel-inner .bg-1,.carousel-inner .bg-2,.carousel-inner .bg-3{height:364px}#index .carousel-inner>.item.bg-3>.sub-bg-3>.welcome-btns>img{position:absolute;right:200px;top:-28px}#index .welcome-btns{padding:0 48px}#index .carousel-indicators li{width:180px;height:102px}#index .carousel-indicators li .title{line-height:28px;padding-top:0;font-size:20px}#index .intro .bitopro-computer{width:260px;top:0}#index .carousel-indicators{top:320px}#index .rate{padding:171px 48px 0 48px}#index .rate .rate-block{width:100%}#index .rate .rate-block .rate-title .nav-tabs>li>a,#index .rate .rate-block .rate-title .nav-tabs>li>a:hover,#index .rate .rate-block .rate-title .nav-tabs>li>a:focus,#index .rate .rate-block .rate-title .nav-tabs>li>a:active{padding:10px 41px}#index .intro{width:100%;margin:80px 50px}}@media screen and (max-width: 575px){#index .table>thead>tr>th,.table>thead>tr>td,.table>tbody>tr>th,.table>tbody>tr>td,.table>tfoot>tr>th,.table>tfoot>tr>td{border-color:transparent}#index .rate .rate-block .rate-content .table .table{background-color:rgba(0,0,0,0.3)}#index{background-image:linear-gradient(to top, transparent, #000 50%, #000)}#index .awesome{margin-top:36px;color:#ffb822}#index .banner .bg-m{width:auto;height:596px;padding:30px;padding-top:300px;text-align:center}#index .banner .bg-m-1{background:url("https://cdn.bitopro.com/images/index/index_m_bitopro.png");background-size:cover}#index .banner .bg-m-1 .title{color:#fff;text-align:center;font-size:26px;line-height:40px;font-weight:300}#index .banner .bg-m-1 .btn{width:148px}#index .banner .bg-m-1 .btn-full{width:100%}#index .banner .bg-m-2{background:url("https://cdn.bitopro.com/images/debt/index_m_bitodebt.png");background-size:cover;padding-top:350px}#index .banner .bg-m-2 .title{color:#fff;text-align:center;font-size:36px;line-height:28px;font-weight:300;margin-bottom:0px}#index .banner .bg-m-2 .sub-title{text-align:center;font-size:16px;margin-top:16px}#index .banner .bg-m-2 .stake-info-block{margin-top:24px;color:#26bdff}#index .banner .bg-m-2 .stake-info-block .stake-info{width:calc(50% - 1px);float:left;text-align:center}#index .banner .bg-m-2 .stake-info-block .stake-info .s-title{font-size:16px;display:block;margin-bottom:4px}#index .banner .bg-m-2 .stake-info-block .stake-info .s-amount{font-size:22px}#index .banner .bg-m-2 .stake-info-block .stake-stick{width:1px;height:38px;background:rgba(38,189,255,0.4);float:left;margin-top:8px}html:lang(en) #index .banner .bg-m-2 .stake-info-block .stake-stick{margin-top:12px;height:54px}#index .banner .bg-m-3{background:url(../img/matic-web-bg-small-0507f7c06737f46d482864c81540694a5abf33027ef8fa5619cb1999e4e06038.png);background-size:cover}#index .banner .bg-m-3 .title{color:#fff;text-align:center;font-size:36px;line-height:20px;font-weight:300}#index .banner .bg-m-3 .sub-title{text-align:center;font-size:16px;margin-top:16px;line-height:24px}#index .banner-ad{color:#fff;font-weight:600px;text-align:center;margin-top:80px}#index .banner-ad .ad1{background:url("https://cdn.bitopro.com/images/index/index_img_bitopro_banner.png");height:136px;width:240px;font-size:26px;padding-top:30px;margin:auto;border:1px solid #002d43}#index .banner-ad .ad2{background:url("https://cdn.bitopro.com/images/debt/index_bitodebt_banner_bitopro.png");height:136px;width:240px;font-size:26px;padding-top:33px;margin:24px auto;border:1px solid #002d43}#index .banner-ad .ad3{background:url("https://cdn.bitopro.com/vip/index_maker0_bitopro.jpg");height:136px;width:240px;font-size:26px;padding-top:40px;margin:auto;border:1px solid #002d43}#index .banner-ad a{color:#fff}#index img{margin-bottom:10px}#index .logo{width:191px;height:48px;margin-top:40px}#index .intro .bitopro-computer{width:244px;height:229px;top:0}#index .intro{width:100%;margin:0 auto;padding:0 14px}#index .rate{padding:72px 20px 62px 20px;background-image:none}#index .rate .rate-block{width:100%}#index .intro .slogan{color:#ccc}#index .app_store_icon{margin-right:0}#index .rate .rate-block .rate-title .nav-tabs>li>a,#index .rate .rate-block .rate-title .nav-tabs>li>a:hover,#index .rate .rate-block .rate-title .nav-tabs>li>a:focus,#index .rate .rate-block .rate-title .nav-tabs>li>a:active{padding:12px}#index .intro .btn-full{margin-bottom:60px !important;width:100%}}@media screen and (max-width: 575px){#index .rate .table-responsive{overflow-x:auto}}html:lang(zh-TW) #index .bg-2 .title-2,html:lang(zh-CN) #index .bg-2 .title-2{font-size:44px}html:lang(zh-TW) #index .bg-2 .sub-title,html:lang(zh-TW) #index .bg-2 .sub-title{font-size:25.5px}
+.carousel-indicators {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  top: 460px;
+  height: 220px;
+  padding: 63px 0 0 0;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  background-image: linear-gradient(to bottom, transparent, #000 50%, #000);
+}
+.carousel-indicators li {
+  width: 240px;
+  height: 136px;
+  border-radius: 0;
+  margin: 0 30px;
+  border: 1px solid #004160;
+}
+.carousel-indicators .active {
+  border: 1px solid #0096e9;
+  box-shadow: 0 0 4px 1px rgba(0, 150, 233, 0.5);
+}
+.carousel-inner > img {
+  margin: auto;
+}
+.carousel-inner > .item > img {
+  width: fit-content;
+  margin: 0 auto;
+}
+.carousel-inner .bg-1 {
+  height: 606px;
+  background-color: #000;
+}
+.carousel-inner .bg-2 {
+  height: 606px;
+  background-image: url('../img/index_bitodebt_bg_bitopro_fix.png');
+}
+.carousel-inner .bg-3 {
+  height: 606px;
+}
+.carousel-inner > .item.bg-3 > .sub-bg-3 > .welcome-btns > img {
+  position: absolute;
+  right: 85px;
+  top: -28px;
+}
+#index .fa {
+  cursor: pointer;
+}
+#index .table > thead > tr > th {
+  border-bottom: 1px solid #4f5052;
+}
+#index .table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+#index .banner {
+  background-color: #000;
+  width: 100%;
+}
+#index .welcome-btns {
+  position: absolute;
+  width: 960px;
+  color: #fff;
+  margin: auto;
+  top: 18%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#index .welcome-btns .awesome {
+  color: #ffb822;
+}
+#index .welcome-btns .title-1 {
+  color: #fff;
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 54px;
+}
+#index .welcome-btns .title-2 {
+  color: #fff;
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 54px;
+}
+#index .welcome-btns .title-3 {
+  color: #fff;
+  font-size: 58.5px;
+  margin-bottom: 24px;
+  font-weight: 300;
+  line-height: 38px;
+}
+#index .welcome-btns .sub-title {
+  line-height: 30px;
+  font-size: 22px;
+}
+#index .welcome-btns .btn {
+  min-width: 180px;
+  font-size: 16px;
+  padding: 10px 26px;
+}
+#index .welcome-btns .btn-width {
+  width: 289px;
+  font-size: 16px;
+}
+#index .banner-1 {
+  background: url('../img/index_img_bitopro_banner.png');
+  font-size: 48px;
+  font-weight: 900;
+  text-indent: 0;
+}
+#index .banner-2 {
+  background: url('../img/index_bitodebt_banner_bitopro.png');
+  font-size: 34px;
+  font-weight: 600;
+  text-indent: 0;
+}
+#index .banner-3 {
+  background: url(../img/matic-web-button-58cc93ee55291654611c2ad5a29c2e5cc9336fd1415132dc18370321438feb33.png);
+  font-size: 36px;
+  font-weight: 600;
+  text-indent: 0;
+}
+#index .banner-3 .small-text {
+  font-size: 24px;
+}
+#index .rate {
+  background-image: linear-gradient(to top, transparent, #000 50%, #000);
+  padding-top: 120px;
+}
+#index .rate .rate-block {
+  width: 961px;
+  height: 100%;
+  margin: 0 auto;
+}
+#index .rate .rate-block .rate-title .nav-tabs {
+  text-align: center;
+  border-bottom: 1px solid #fff;
+  padding: 0px 2px;
+}
+#index .rate .rate-block .rate-title .nav-tabs > li > a,
+#index .rate .rate-block .rate-title .nav-tabs > li > a:hover,
+#index .rate .rate-block .rate-title .nav-tabs > li > a:focus {
+  background-color: transparent;
+  border: 0;
+  padding: 10px 64px;
+  color: #fff;
+}
+#index .rate .rate-block .rate-title .nav-tabs > li.active > a,
+#index .rate .rate-block .rate-title .nav-tabs > li.active > a:hover,
+#index .rate .rate-block .rate-title .nav-tabs > li.active > a:focus {
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  border-bottom: 4px solid #fff;
+}
+#index .rate .rate-block .rate-content {
+  max-height: 506px;
+  overflow-y: scroll;
+}
+#index .rate .rate-block .rate-content a,
+#index .rate .rate-block .rate-content a:active,
+#index .rate .rate-block .rate-content a:hover,
+#index .rate .rate-block .rate-content a:focus {
+  color: #fff;
+}
+#index .rate .rate-block .rate-content .table .table {
+  background-color: transparent;
+}
+#index .rate .rate-block .rate-content .table > thead > tr > th {
+  height: 46px;
+}
+#index .rate .rate-block .rate-content .table > tbody > tr > td {
+  border: 1px solid transparent;
+  height: 46px;
+  cursor: pointer;
+}
+#index .rate .rate-block .rate-content .icon-text {
+  padding-left: 10px;
+  vertical-align: middle;
+}
+#index .rate .rate-block .rate-content .rate_up {
+  color: #05c900;
+}
+#index .rate .rate-block .rate-content .rate_down {
+  color: #e4323a;
+}
+#index .intro {
+  width: 960px;
+  margin: 0 auto;
+  margin-top: 160px;
+}
+#index .intro .logo {
+  width: 191px;
+  height: 48px;
+}
+#index .intro .slogan {
+  font-size: 24px;
+  color: #fff;
+  margin: 8px 0 16px 0;
+}
+#index .intro .bitopro-computer {
+  position: relative;
+  top: -70px;
+}
+#index .intro .btn-full {
+  width: 297px;
+  height: 46px;
+  font-size: 16px;
+}
+#index .mobile-btns {
+  margin-top: 24px;
+}
+#index .app_store_icon {
+  margin-right: 8px;
+}
+#index .google_play_icon {
+  display: inline-block;
+}
+svg polyline {
+  fill: none;
+  stroke: #e4323a;
+  stroke-width: 1;
+}
+svg polyline.is_up {
+  fill: none;
+  stroke: #05c900;
+  stroke-width: 1;
+}
+#index .fa {
+  cursor: pointer;
+}
+#index .table > thead > tr > th {
+  border-bottom: 1px solid #4f5052;
+}
+#index .table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+#index .banner {
+  background-color: #000;
+  width: 100%;
+}
+#index .welcome-btns {
+  position: absolute;
+  width: 960px;
+  color: #fff;
+  margin: auto;
+  top: 18%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#index .welcome-btns .bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 669px;
+}
+#index .welcome-btns .title {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 54px;
+}
+#index .welcome-btns .stake-info-block {
+  width: 289px;
+  margin-top: 24px;
+  color: #26bdff;
+}
+#index .welcome-btns .stake-info-block .stake-info {
+  width: 132px;
+  float: left;
+}
+#index .welcome-btns .stake-info-block .stake-info .s-title {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+#index .welcome-btns .stake-info-block .stake-info .s-amount {
+  font-size: 20px;
+}
+#index .welcome-btns .stake-info-block .stake-stick {
+  width: 1px;
+  height: 34px;
+  background: rgba(38, 189, 255, 0.4);
+  float: left;
+  margin: 6px 12px 0 12px;
+  vertical-align: middle;
+}
+#index .welcome-btns .stake-info-block .stake-info:last-child {
+  padding-left: 15px;
+}
+html:lang(en) #index .welcome-btns .stake-info-block .stake-stick {
+  height: 54px;
+}
+#index .carousel-indicators {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  top: 490px;
+  height: 220px;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  background-image: linear-gradient(to bottom, transparent, #000 50%, #000);
+}
+#index .carousel-indicators li {
+  width: 240px;
+  height: 136px;
+  border-radius: 0;
+  margin: 0 30px;
+  border: 1px solid #004160;
+  background-size: cover;
+}
+#index .carousel-indicators .active {
+  border: 1px solid #0096e9;
+  box-shadow: 0 0 4px 1px rgba(0, 150, 233, 0.5);
+}
+#index .carousel-indicators .title {
+  font-size: 26px;
+  line-height: 34px;
+  padding-top: 10px;
+}
+#index .rate .table-responsive {
+  overflow-x: hidden;
+}
+#index .rate .rate-block .rate-title .nav-tabs {
+  text-align: center;
+  border-bottom: 1px solid #fff;
+  padding: 0px 4px;
+}
+#index .rate .rate-block .rate-title .nav-tabs > li > a,
+#index .rate .rate-block .rate-title .nav-tabs > li > a:hover,
+#index .rate .rate-block .rate-title .nav-tabs > li > a:focus {
+  background-color: transparent;
+  border: 0;
+  padding: 10px 64px;
+  color: #fff;
+}
+#index .rate .rate-block .rate-title .nav-tabs > li.active > a,
+#index .rate .rate-block .rate-title .nav-tabs > li.active > a:hover,
+#index .rate .rate-block .rate-title .nav-tabs > li.active > a:focus {
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  border-bottom: 4px solid #fff;
+}
+#index .rate .rate-block .rate-content {
+  max-height: 506px;
+  overflow-y: scroll;
+}
+#index .rate .rate-block .rate-content a,
+#index .rate .rate-block .rate-content a:active,
+#index .rate .rate-block .rate-content a:hover,
+#index .rate .rate-block .rate-content a:focus {
+  color: #fff;
+}
+#index .rate .rate-block .rate-content .table .table {
+  background-color: transparent;
+}
+#index .rate .rate-block .rate-content .table > thead > tr > th {
+  height: 46px;
+}
+#index .rate .rate-block .rate-content .table > tbody > tr > td {
+  border: 1px solid transparent;
+  height: 46px;
+}
+#index .rate .rate-block .rate-content .icon-text {
+  padding-left: 10px;
+  vertical-align: middle;
+}
+#index .rate .rate-block .rate-content .rate_up {
+  color: #05c900;
+}
+#index .rate .rate-block .rate-content .rate_down {
+  color: #e4323a;
+}
+#index .intro {
+  width: 960px;
+  margin: 0 auto;
+  margin-top: 110px;
+  margin-bottom: 490px;
+}
+#index .intro .logo {
+  width: 191px;
+  height: 48px;
+}
+#index .intro .slogan {
+  font-size: 24px;
+  color: #fff;
+  margin: 8px 0 16px 0;
+}
+#index .intro .bitopro-computer {
+  position: relative;
+  top: -70px;
+}
+#index .intro .btn-full {
+  width: 315px;
+  height: 46px;
+  font-size: 16px;
+}
+#index .mobile-btns {
+  margin-top: 24px;
+}
+#index .app_store_icon {
+  margin-right: 8px;
+}
+#index .banner-1,
+.banner-2,
+.banner-3 {
+  overflow: hidden;
+}
+#index .banner-2 {
+  position: relative;
+}
+#index .banner-end {
+  font-size: 14px;
+  font-weight: 800;
+  width: 110px;
+  background: #0096df;
+  position: absolute;
+  top: 14px;
+  left: -30px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #f0f0f0;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+@media screen and (max-width: 991px) {
+  #index .carousel-inner .bg-1,
+  .carousel-inner .bg-2,
+  .carousel-inner .bg-3 {
+    height: 364px;
+  }
+  #index .carousel-inner > .item.bg-3 > .sub-bg-3 > .welcome-btns > img {
+    position: absolute;
+    right: 200px;
+    top: -28px;
+  }
+  #index .welcome-btns {
+    padding: 0 48px;
+  }
+  #index .carousel-indicators li {
+    width: 180px;
+    height: 102px;
+  }
+  #index .carousel-indicators li .title {
+    line-height: 28px;
+    padding-top: 0;
+    font-size: 20px;
+  }
+  #index .intro .bitopro-computer {
+    width: 260px;
+    top: 0;
+  }
+  #index .carousel-indicators {
+    top: 320px;
+  }
+  #index .rate {
+    padding: 171px 48px 0 48px;
+  }
+  #index .rate .rate-block {
+    width: 100%;
+  }
+  #index .rate .rate-block .rate-title .nav-tabs > li > a,
+  #index .rate .rate-block .rate-title .nav-tabs > li > a:hover,
+  #index .rate .rate-block .rate-title .nav-tabs > li > a:focus,
+  #index .rate .rate-block .rate-title .nav-tabs > li > a:active {
+    padding: 10px 41px;
+  }
+  #index .intro {
+    width: 100%;
+    margin: 80px 50px;
+  }
+}
+@media screen and (max-width: 575px) {
+  #index .table > thead > tr > th,
+  .table > thead > tr > td,
+  .table > tbody > tr > th,
+  .table > tbody > tr > td,
+  .table > tfoot > tr > th,
+  .table > tfoot > tr > td {
+    border-color: transparent;
+  }
+  #index .rate .rate-block .rate-content .table .table {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  #index {
+    background-image: linear-gradient(to top, transparent, #000 50%, #000);
+  }
+  #index .awesome {
+    margin-top: 36px;
+    color: #ffb822;
+  }
+  #index .banner .bg-m {
+    width: auto;
+    height: 596px;
+    padding: 30px;
+    padding-top: 300px;
+    text-align: center;
+  }
+  #index .banner .bg-m-1 {
+    background: url('../img/index_m_bitopro.png');
+    background-size: cover;
+  }
+  #index .banner .bg-m-1 .title {
+    color: #fff;
+    text-align: center;
+    font-size: 26px;
+    line-height: 40px;
+    font-weight: 300;
+  }
+  #index .banner .bg-m-1 .btn {
+    width: 148px;
+  }
+  #index .banner .bg-m-1 .btn-full {
+    width: 100%;
+  }
+  #index .banner .bg-m-2 {
+    background: url('../img/index_m_bitodebt.png');
+    background-size: cover;
+    padding-top: 350px;
+  }
+  #index .banner .bg-m-2 .title {
+    color: #fff;
+    text-align: center;
+    font-size: 36px;
+    line-height: 28px;
+    font-weight: 300;
+    margin-bottom: 0px;
+  }
+  #index .banner .bg-m-2 .sub-title {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 16px;
+  }
+  #index .banner .bg-m-2 .stake-info-block {
+    margin-top: 24px;
+    color: #26bdff;
+  }
+  #index .banner .bg-m-2 .stake-info-block .stake-info {
+    width: calc(50% - 1px);
+    float: left;
+    text-align: center;
+  }
+  #index .banner .bg-m-2 .stake-info-block .stake-info .s-title {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 4px;
+  }
+  #index .banner .bg-m-2 .stake-info-block .stake-info .s-amount {
+    font-size: 22px;
+  }
+  #index .banner .bg-m-2 .stake-info-block .stake-stick {
+    width: 1px;
+    height: 38px;
+    background: rgba(38, 189, 255, 0.4);
+    float: left;
+    margin-top: 8px;
+  }
+  html:lang(en) #index .banner .bg-m-2 .stake-info-block .stake-stick {
+    margin-top: 12px;
+    height: 54px;
+  }
+  #index .banner .bg-m-3 {
+    background: url(../img/matic-web-bg-small-0507f7c06737f46d482864c81540694a5abf33027ef8fa5619cb1999e4e06038.png);
+    background-size: cover;
+  }
+  #index .banner .bg-m-3 .title {
+    color: #fff;
+    text-align: center;
+    font-size: 36px;
+    line-height: 20px;
+    font-weight: 300;
+  }
+  #index .banner .bg-m-3 .sub-title {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 16px;
+    line-height: 24px;
+  }
+  #index .banner-ad {
+    color: #fff;
+    font-weight: 600px;
+    text-align: center;
+    margin-top: 80px;
+  }
+  #index .banner-ad .ad1 {
+    background: url('../img/index_img_bitopro_banner.png');
+    height: 136px;
+    width: 240px;
+    font-size: 26px;
+    padding-top: 30px;
+    margin: auto;
+    border: 1px solid #002d43;
+  }
+  #index .banner-ad .ad2 {
+    background: url('../img/index_bitodebt_banner_bitopro.png');
+    height: 136px;
+    width: 240px;
+    font-size: 26px;
+    padding-top: 33px;
+    margin: 24px auto;
+    border: 1px solid #002d43;
+  }
+  #index .banner-ad .ad3 {
+    background: url('https://cdn.bitopro.com/vip/index_maker0_bitopro.jpg');
+    height: 136px;
+    width: 240px;
+    font-size: 26px;
+    padding-top: 40px;
+    margin: auto;
+    border: 1px solid #002d43;
+  }
+  #index .banner-ad a {
+    color: #fff;
+  }
+  #index img {
+    margin-bottom: 10px;
+  }
+  #index .logo {
+    width: 191px;
+    height: 48px;
+    margin-top: 40px;
+  }
+  #index .intro .bitopro-computer {
+    width: 244px;
+    height: 229px;
+    top: 0;
+  }
+  #index .intro {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 14px;
+  }
+  #index .rate {
+    padding: 72px 20px 62px 20px;
+    background-image: none;
+  }
+  #index .rate .rate-block {
+    width: 100%;
+  }
+  #index .intro .slogan {
+    color: #ccc;
+  }
+  #index .app_store_icon {
+    margin-right: 0;
+  }
+  #index .rate .rate-block .rate-title .nav-tabs > li > a,
+  #index .rate .rate-block .rate-title .nav-tabs > li > a:hover,
+  #index .rate .rate-block .rate-title .nav-tabs > li > a:focus,
+  #index .rate .rate-block .rate-title .nav-tabs > li > a:active {
+    padding: 12px;
+  }
+  #index .intro .btn-full {
+    margin-bottom: 60px !important;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 575px) {
+  #index .rate .table-responsive {
+    overflow-x: auto;
+  }
+}
+html:lang(zh-TW) #index .bg-2 .title-2,
+html:lang(zh-CN) #index .bg-2 .title-2 {
+  font-size: 44px;
+}
+html:lang(zh-TW) #index .bg-2 .sub-title,
+html:lang(zh-TW) #index .bg-2 .sub-title {
+  font-size: 25.5px;
+}

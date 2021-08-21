@@ -11183,9 +11183,8 @@ a.text-dark:hover {
 }
 
 .footer-wrapper {
-  min-height: 290px;
+  min-height: 150px;
   background-color: #2f3134;
-  padding-bottom: 100px
 }
 
 .footer-content {

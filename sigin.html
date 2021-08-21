@@ -16,83 +16,40 @@
   <meta name="theme-color" content="#2D4F8F">
 
   <link rel="stylesheet" media="all" href="./css/sigin.css">
-  <link rel="icon" type="image/x-icon" href="https://cdn.bitopro.com/images/favicon.ico">
-
-  <style type="text/css">
-    /* Chart.js */
-    @-webkit-keyframes chartjs-render-animation {
-      from {
-        opacity: 0.99
-      }
-
-      to {
-        opacity: 1
-      }
+  <style>
+    #new_user{
+      margin-top: 50px;
     }
-
-    @keyframes chartjs-render-animation {
-      from {
-        opacity: 0.99
-      }
-
-      to {
-        opacity: 1
-      }
+    .help-box{
+      margin-top: 40px;
+      text-align: right;
     }
-
-    .chartjs-render-monitor {
-      -webkit-animation: chartjs-render-animation 0.001s;
-      animation: chartjs-render-animation 0.001s;
+    .form-group.required{
+      position: relative;
     }
+    .form-group.error .form-control {
+        border: 1px dotted #e4323a !important;
+    }
+    .form-error{
+      position: absolute;
+      color: #e4323a;
+      display: none;
+      font-size: 12px;
+    }
+    .form-group.error .form-error{
+      display:block;
+    }
+    
   </style>
-
-
-  <!-- <link rel="stylesheet" href="./28.0213 (USDT_TWD) BitoPro 台灣幣託交易所_files/OneSignalSDKStyles.css"> -->
 </head>
 <body>
   <div id="zone" data-ws="wss://www.bitopro.com/ws/usdt_twd" data-ws-kind="usdt_twd" data-cyber="usdt" data-center="twd"
     data-env="production" class="body-wrapper">
     <nav id="header" class="navbar navbar-inverse">
       <div class="container-fluid">
-        <div class="navbar-header"><a href="https://www.bitopro.com/" class="navbar-brand"><img
-              src="./28.0213 (USDT_TWD) BitoPro 台灣幣託交易所_files/bitoPro_logo.svg" alt="Logo" class="site-logo"></a></div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav pull-right m-t-xs">
-            <li class="dropdown"><a href="https://www.bitopro.com/users/sign_in#">
-                <span class="this-lanng">简体中文</span>
-                <i class="caret"></i></a>
-              <ul class="dropdown-menu">
-                <li><a href="javascript:void(0)">正體中文</a>
-                  <a href="javascript:void(0)">English</a>
-                  <a href="javascript:void(0)">简体中文</a>
-                </li>
-              </ul>
-            </li>
-            <li class="separation">|</li>
-            <!-- <li class="dropdown"><a data-toggle="dropdown" href="https://www.bitopro.com/users/sign_in#"
-                class="dropdown-toggle"><i class="fas fa-mobile-alt fa-large"></i></a>
-              <ul class="dropdown-menu">
-                <li>
-                  <p class="download-app-title">掃描下載 BitoPro APP</p>
-                  <p id="qrcode_store" title="https://onelink.to/h6kwhz"><canvas width="209" height="209"
-                      style="display: none;"></canvas><img
-                      src="data:image/png;base64,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"
-                      style="display: block;"></p>
-                  <p class="download-app-desc">同步支援 iOS 與 Andorid系統</p>
-                </li>
-              </ul>
-            </li> -->
-            <li class="dropdown"><a data-toggle="dropdown" href="https://www.bitopro.com/users/sign_in#"
-                class="dropdown-toggle"><i class="fas fa-question-circle fa-large"></i></a>
-              <ul class="dropdown-menu">
-                <li><a href="javascript:void(0)" target="_blank" rel="noreferer,noopener"
-                    title="BitoPro 常見問題">常見問題 <i class="fas fa-external-link-alt m-l-xs"></i></a></li>
-                <li><a href="javascript:void(0)">限制與費用</a></li>
-                <li><a href="javascript:void(0)" title="BitoPro 聯絡我們">聯絡我們</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+        <div class="navbar-header"><a href="javascript:void(0)" class="navbar-brand"><img
+              src="./img/bitoPro_logo.svg" alt="Logo" class="site-logo"></a></div>
+
       </div>
     </nav>
     <div class="container">
@@ -102,13 +59,6 @@
             <div class="ibox-content ibox-content-device">
               <div class="text-center">
                 <h2 class="login-title">登入</h2>
-                <p class="host-checking-text">請確認您正在造訪:</p>
-                <div class="host-url">
-                  <div class="host-url__icon"><i class="fas fa-lock"></i></div>
-                  <div class="host-url__text">
-                    https://www.bitopro.com
-                  </div>
-                </div>
               </div>
               <form id="new_user"  class="simple_form new_user">
                 <div class="form-group">
@@ -116,7 +66,9 @@
                     <label for="user_email" class="email required">電子郵件</label>
                     <input required="required"
                       placeholder="請輸入電子信箱" type="email" value="" 
-                      id="user_email" class="form-control string email required"></div>
+                      id="user_email" class="form-control string email required">
+                    <div class="form-error"></div>
+                  </div>
                 </div>
                 <div class="form-group">
                   <div class="form-group password required user_password">
@@ -126,19 +78,17 @@
                       <input required="required"
                         placeholder="請輸入密碼" type="password" id="user_password"
                         class="form-control password required"> <i id="js-password-show-hide"
-                        class="fa fa-eye-slash password-show-hide-wrapper__icon"></i></div>
+                        class="fa fa-eye-slash password-show-hide-wrapper__icon"></i>
+                    </div>
+                    <div class="form-error"></div> 
                   </div>
+                    
                 </div>
-                <!-- <div class="form-group captcha-group"><input type="hidden" id="g-recaptcha-response-data-login"
-                    class="g-recaptcha g-recaptcha-response ">
-                  </input>
-                </div> -->
                 <div class="text-center">
-                  <p class="google-recaptcha-comment">本頁面受 reCAPTCHA 機制保護，並遵守 Google <a
-                      href="https://policies.google.com/privacy" target="_blank" rel="noreferer,noopener">隱私權政策</a> 及 <a
-                      href="https://policies.google.com/terms" target="_blank" rel="noreferer,noopener">服務條款</a></p>
-                </div> <input type="submit" name="commit" value="登入"
-                  class="btn btn btn-block btn-primary m-b m-t-sm">
+                  <p class="google-recaptcha-comment">本頁面受 reCAPTCHA 機制保護，並遵守 Google 
+                    
+                </div> <button id="submit"
+                  class="btn btn btn-block btn-primary m-b m-t-sm">提交</button>
                 <div class="text-center"><small>
                     還沒有帳號嗎?
                     <a href="./sign_up.html">立即註冊</a></small></div>
@@ -151,167 +101,96 @@
     <footer id="footer">
       <div class="container">
         <div class="col-xs-12 col-sm-12 col-md-12">
-          <div class="row">
-            <div class="col-xs-6 col-sm-3 col-md-2 col-md-offset-1">
-              <p>BitoPro</p>
-              <ul>
-                <li><a href="https://www.bitopro.com/about">關於BitoPro</a></li>
-                <li><a target="_blank" href="https://bito.bitopro.com/">BITO白皮書</a></li>
-                <li><a target="_blank" rel="noreferer,noopener"
-                    href="https://bitopro.zendesk.com/hc/zh-tw/sections/360006599732-%E5%AA%92%E9%AB%94%E5%A0%B1%E5%B0%8E">媒體報導</a>
-                </li>
-                <li><a target="_blank" rel="noreferer,noopener" href="https://www.bitoex.com/">BitoEX</a></li>
-                <li><a href="https://cdn.bitopro.com/BitoPro_Brand_Assets.zip">Brand Assets</a></li>
-                <li><a target="_blank" rel="noreferer,noopener"
-                    href="https://itunes.apple.com/tw/app/bitopro/id1393007496?mt=8">iOS App</a></li>
-                <li><a target="_blank" rel="noreferer,noopener"
-                    href="https://play.google.com/store/apps/details?id=com.bitoex.bitoproapp">Android App</a></li>
-              </ul>
-            </div>
-            <div class="col-xs-6 col-sm-3 col-md-2">
-              <p>Information</p>
-              <ul>
-                <li><a target="_blank" rel="noreferer,noopener" href="https://bitopro.zendesk.com/">常見問題</a></li>
-                <li><a href="https://www.bitopro.com/fees">限制與費用</a></li>
-                <li><a href="https://www.bitopro.com/announcements">全站公告</a></li>
-                <li><a target="_blank" href="https://developer.bitopro.com/">API文件</a></li>
-                <li><a href="https://www.bitopro.com/token_exchange/index">代幣發售</a></li>
-                <li><a href="https://www.bitopro.com/disclaimer">免責聲明</a></li>
-                <li><a href="https://www.bitopro.com/terms">使用條款</a></li>
-                <li><a href="https://www.bitopro.com/privacy">隱私政策</a></li>
-              </ul>
-            </div>
-            <div class="col-xs-6 col-sm-3 col-md-2">
-              <p>Contact</p>
-              <ul>
-                <li><a href="https://www.bitopro.com/contact">聯絡我們</a></li>
-                <li><a target="_blank" rel="noreferer,noopener"
-                    href="https://bitopro.zendesk.com/hc/zh-tw/requests/new">意見回饋</a></li>
-                <li><a href="https://www.bitopro.com/institution">法人戶申請</a></li>
-                <li><a href="https://www.bitopro.com/career">人才招募</a></li>
-                <li><a target="_blank" rel="noreferer,noopener"
-                    href="https://bitopro.zendesk.com/hc/zh-tw/articles/360035233032">Bug Bounty</a></li>
-              </ul>
-            </div>
-            <div class="col-xs-6 col-sm-3 col-md-2">
-              <p>Social</p>
-              <ul>
-                <li><a target="_blank" rel="noreferer,noopener"
-                    href="https://www.facebook.com/bitopro.bito/">Facebook</a></li>
-                <li><a target="_blank" rel="noreferer,noopener" href="https://line.me/R/ti/p/@jgb0476p">LINE</a></li>
-                <li><a target="_blank" rel="noreferer,noopener" href="https://t.me/BitoProOfficial">Telegram</a></li>
-                <li><a target="_blank" rel="noreferer,noopener" href="https://twitter.com/BitoEX_Official">Twitter</a>
-                </li>
-                <li><a target="_blank" rel="noreferer,noopener"
-                    href="https://medium.com/%E5%B9%A3%E8%A8%97-bitoex">Medium</a></li>
-                <li><a target="_blank" rel="noreferer,noopener"
-                    href="https://www.youtube.com/channel/UCCgLP4koK8yj2I5nQguRJfw/featured?view_as=subscriber">Youtube</a>
-                </li>
-                <li><a target="_blank" rel="noreferer,noopener" href="https://github.com/bitoex">Github</a></li>
-              </ul>
-            </div>
-            <div class="col-xs-6 col-sm-3 col-md-2">
-              <p class="m-b-xs">Language</p> <select class="select2-language form-control select2-hidden-accessible"
-                tabindex="-1" aria-hidden="true">
-                <option data-link="/0/i18n?locale=zh-TW" selected="selected">正體中文</option>
-                <option data-link="/1/i18n?locale=en">English</option>
-                <option data-link="/2/i18n?locale=zh-CN">简体中文</option>
-              </select><span class="select2 select2-container select2-container--default" dir="ltr"
-                style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single"
-                    role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0"
-                    aria-labelledby="select2-4i1o-container"><span class="select2-selection__rendered"
-                      id="select2-4i1o-container" title="正體中文">正體中文</span><span class="select2-selection__arrow"
-                      role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper"
-                  aria-hidden="true"></span></span>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
           <p class="copyright">Copyright © 2018 - 2021 BitoEX. V 6.8.0</p>
+          <div class="help-box">
+            <button class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-question-sign"></i>帮助</button>
+          </div>
         </div>
       </div>
     </footer>
   </div>
 
   <script type="text/javascript" src="./js/jquery.min.js"></script>
-  <script src="./js/jquery.i18n.properties.min.js"></script>
-  <script src="./js/bootstrap.min.js"></script>
 
   <script type="text/javascript">
-    $(function () {
-      // toastr_get_storge("msg")
+    $(function(){
+      var isPassword = true;
+      $('#js-password-show-hide').click(function(){
+        
+        if(isPassword){
+          isPassword = false;
+          $('#user_password').attr('type','text');
+          $(this).removeClass('fa-eye-slash')
+          $(this).addClass('fa-eye')
+        }else{
+          isPassword = true;
+          $('#user_password').attr('type','password');
+          $(this).removeClass('fa-eye')
+          $(this).addClass('fa-eye-slash')
+        }
+        
+      })
+      $('#submit').click(function(){
+          if(validateEmail() && validatePassword()){
+            alert('登录')
+          }else{
+            return false;
+          }
+        
+      })
+      $('#user_email').blur(function(){
+        validateEmail();
+      }); 
+      $('#user_password').blur(function(){
+        validatePassword();
+      });
+      // .form-error
+    })
 
-      const regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/
+    function validateEmail(){
+      var user_email = $('#user_email').val();
+      var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+ 6       
+      if(user_email == ''){
+        errorInput($('#user_email'),'请输入电子邮箱');
+        return false;
+      }else if(!myreg.test(user_email)){
+        errorInput($('#user_email'),'请输入有效的电子邮箱');
+        return false;
+      }else{
+        errorRemove($('#user_email'));
+        return true;
+      }
+    }
 
-      // $.validator.addMethod("password", function (value, element) {
-      //   return regex.test(value)
-      // }, '密碼最少8碼，至少大小寫英文各1跟數字');
+    function validatePassword(){
+      var myreg = /^(?![0-9]+$)(?![a-z]+$)(?![A-Z]+$)(?!([^(0-9a-zA-Z)])+$)^.{8,16}$/;   
+      var user_password = $('#user_password').val();
+      if(user_password == ''){
+        errorInput($('#user_password'),'请输入密码');
+        return false;
+      }else if(!myreg.test(user_password)){
+        errorInput($('#user_password'),'密码最少8-16码，至少大小写英文各1跟数字');
+        return false;
+      }else{
+        errorRemove($('#user_password'));
+        return true;
+      }
+    }
 
-      // $("#new_user").validate({
-      //   rules: {
-      //     "email": {
-      //       required: true,
-      //     },
-      //     "password": {
-      //       required: true,
-      //     },
-      //   },
-      //   messages: {
-      //     "email": {
-      //       required: '請輸入電子信箱'
-      //     },
-      //     "password": {
-      //       required: '請輸入密碼'
-      //     }
-      //   }
-      // });
-    });
-
-    // $(document).ready(function () {
-    //   $("#js-password-show-hide").click(function () {
-    //     if ($("#user_password").attr("type") == "password") {
-    //       $("#user_password").attr("type", "text")
-    //       $("#js-password-show-hide").removeClass("fa-eye-slash");
-    //       $("#js-password-show-hide").addClass("fa-eye");
-    //     } else {
-    //       $("#user_password").attr("type", "password")
-    //       $("#js-password-show-hide").removeClass("fa-eye");
-    //       $("#js-password-show-hide").addClass("fa-eye-slash");
-    //     }
-    //   });
-    // })
-
-    // jQuery(function () {
-    //   if ($('#qrcode_store')[0]) {
-    //     new QRCode("qrcode_store", {
-    //       text: "https://onelink.to/h6kwhz",
-    //       width: 209,
-    //       height: 209,
-    //       colorDark: "#000000",
-    //       colorLight: "#ffffff",
-    //       correctLevel: QRCode.CorrectLevel.L
-    //     });
-    //   }
-    //   $(".dropdown").hover(
-    //     function () {
-    //       $('.dropdown-menu', this).stop(true, true).fadeIn("fast");
-    //       $(this).toggleClass('open');
-    //     },
-    //     function () {
-    //       $('.dropdown-menu', this).stop(true, true).fadeOut("fast");
-    //       $(this).toggleClass('open');
-    //     }
-    //   );
-    // });
-
-    // jQuery(function () {
-    //   $('.select2-language').select2({
-    //     width: '100%',
-    //     minimumResultsForSearch: -1
-    //   }).change(function () {
-    //     window.location.href = $(this).find(":selected").data('link');
-    //   });
-    // });
+    function errorInput(div,text){
+      div.closest('.form-group').addClass('error');
+      div.closest('.form-group').find('.form-error').html(text)
+    }
+    function errorRemove(div){
+      if(div){
+        div.closest('.form-group').removeClass('error');
+        div.closest('.form-group').find('.form-error').html('')
+      }else{
+        $('.form-group.required').removeClass('error');
+        $('.form-group.required').find('.form-error').html('')
+      }
+    }
   </script>
 
 
