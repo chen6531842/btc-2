@@ -77,9 +77,9 @@
               <form id="new_user"  class="simple_form new_user">
                 <div class="form-group">
                   <div class="form-group email required user_email">
-                    <label for="user_email" class="email required">電子郵件</label>
+                    <label for="user_email" class="email required">手機號碼</label>
                     <input required="required"
-                      placeholder="請輸入電子信箱" type="email" value="" 
+                      placeholder="請輸入手機號碼" type="email" value="" 
                       id="user_email" class="form-control string email required">
                     <div class="form-error"></div>
                   </div>
@@ -87,7 +87,7 @@
                 <div class="form-group">
                   <div class="form-group password required user_password">
                     <label for="user_password" class="password required">密碼</label> 
-                    <a href="javascript:void(0)" class="pull-right">忘記密碼</a>
+                    <!-- <a href="javascript:void(0)" class="pull-right">忘記密碼</a> -->
                     <div class="password-show-hide-wrapper">
                       <input required="required"
                         placeholder="請輸入密碼" type="password" id="user_password"
@@ -103,9 +103,9 @@
                     
                 </div> <button id="submit"
                   class="btn btn btn-block btn-primary m-b m-t-sm">提交</button>
-                <div class="text-center"><small>
+                <div class="text-center">
                     還沒有帳號嗎?
-                    <a href="./sign_up.html">立即註冊</a></small></div>
+                    <a href="./sign_up.html">立即註冊</a></div>
               </form>
             </div>
           </div>
@@ -116,9 +116,9 @@
       <div class="container">
         <div class="col-xs-12 col-sm-12 col-md-12">
           <p class="copyright">Copyright © 2018 - 2021 BitoEX. V 6.8.0</p>
-          <div class="help-box">
+          <!-- <div class="help-box">
             <button class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-question-sign"></i>帮助</button>
-          </div>
+          </div> -->
         </div>
       </div>
     </footer>
@@ -192,10 +192,7 @@
       var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
  6       
       if(user_email == ''){
-        errorInput($('#user_email'),'请输入电子邮箱');
-        return false;
-      }else if(!myreg.test(user_email)){
-        errorInput($('#user_email'),'请输入有效的电子邮箱');
+        errorInput($('#user_email'),'請輸入手機號碼');
         return false;
       }else{
         errorRemove($('#user_email'));
@@ -207,10 +204,10 @@
       var myreg = /^(?![0-9]+$)(?![a-z]+$)(?![A-Z]+$)(?!([^(0-9a-zA-Z)])+$)^.{8,16}$/;   
       var user_password = $('#user_password').val();
       if(user_password == ''){
-        errorInput($('#user_password'),'请输入密码');
+        errorInput($('#user_password'),'請輸入密碼');
         return false;
       }else if(!myreg.test(user_password)){
-        errorInput($('#user_password'),'密码最少8-16码，至少大小写英文各1跟数字');
+        errorInput($('#user_password'),'密碼最少8-16碼，至少大小寫英文各1跟數字');
         return false;
       }else{
         errorRemove($('#user_password'));

@@ -68,7 +68,7 @@
     <nav id="header" class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a href="/" class="navbar-brand">
+          <a href="javascript:void(0)" class="navbar-brand">
             <img class="site-logo" src="./img/bitoPro_logo.svg" alt="Logo">
           </a>
         </div>
@@ -88,9 +88,9 @@
               <form class="simple_form tab-pane fade in active" id="new_user" >
                 <div class="form-group">
                   <div class="form-group email required user_email"><label class="email required"
-                      for="user_email">電子郵件</label>
+                      for="user_email">手機號碼</label>
                       <input class="form-control string email required" required="required"
-                      placeholder="請輸入電子信箱" type="email" value=""
+                      placeholder="請輸入手機號碼" type="email" value=""
                       id="user_email" /></div>
                   <div class="form-error"></div>  
                 </div>
@@ -107,10 +107,10 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="referrer_code">推薦人ID (選填)</label>
+                  <label for="referrer_code">邀請碼 (必填)</label>
                   <div class="form-group required ">
                     <input type="number" id="referrer_code" class="form-control"
-                      placeholder="推薦人ID (選填)" />
+                      placeholder="邀請碼 (必填)" />
                     <div class="form-error"></div> 
                   </div>
                 </div>
@@ -145,9 +145,9 @@
       <div class="container">
         <div class="col-xs-12 col-sm-12 col-md-12">
           <p class="copyright">Copyright © 2018 - 2021 BitoEX. V 6.8.0</p>
-          <div class="help-box">
+          <!-- <div class="help-box">
             <button class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-question-sign"></i>幫助</button>
-          </div>
+          </div> -->
         </div>
       </div>
     </footer>
@@ -217,7 +217,7 @@
     
     function validateCode(){
       if(user_email == ''){
-        errorInput($('#referrer_code'),'请输入邀请码');
+        errorInput($('#referrer_code'),'請輸入邀請碼');
         return false;
       }else{
         errorRemove($('#user_email'));
@@ -226,13 +226,10 @@
     }
     function validateEmail(){
       var user_email = $('#user_email').val();
-      var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+      // var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
  6       
       if(user_email == ''){
-        errorInput($('#user_email'),'请输入电子邮箱');
-        return false;
-      }else if(!myreg.test(user_email)){
-        errorInput($('#user_email'),'请输入有效的电子邮箱');
+        errorInput($('#user_email'),'請輸入手機號碼');
         return false;
       }else{
         errorRemove($('#user_email'));
@@ -244,10 +241,10 @@
       var myreg = /^(?![0-9]+$)(?![a-z]+$)(?![A-Z]+$)(?!([^(0-9a-zA-Z)])+$)^.{8,16}$/;   
       var user_password = $('#user_password').val();
       if(user_password == ''){
-        errorInput($('#user_password'),'请输入密码');
+        errorInput($('#user_password'),'請輸入密碼');
         return false;
       }else if(!myreg.test(user_password)){
-        errorInput($('#user_password'),'密码最少8-16码，至少大小写英文各1跟数字');
+        errorInput($('#user_password'),'密碼最少8-16碼，至少大小寫英文各1跟數字');
         return false;
       }else{
         errorRemove($('#user_password'));
