@@ -1,0 +1,189 @@
+<html lang="cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>邀请码管理</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/element-ui/2.15.1/theme-chalk/index.min.css">
+    <script src="https://cdn.staticfile.org/vue/2.6.9/vue.min.js"></script>
+    <script src="https://cdn.staticfile.org/element-ui/2.15.1/index.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            overflow: hidden;
+            background-color: #f5f5f5;
+        }
+        .el-aside .el-menu{
+            border-right: none;
+        }
+        .mainMain{
+            background: #fff;
+            /*margin-left: 10px;*/
+            margin-bottom: 60px;
+        }
+        .mainIframe{
+            width: 100%;
+            height: 100%;
+        }
+        .el-card__body{
+            cursor: pointer;
+        }
+        .el-container{
+          height: 100%;
+        }
+        .pagination{
+          padding: 10px 0;
+          text-align: right;
+        }
+        .form-table-box{
+          display: flex;
+        }
+        .form-table-flex{
+          flex: 1;
+        }
+        .form-table-box .el-form-item{
+          margin-bottom: 0
+        }
+    </style>
+
+</head>
+<body class="">
+  <div id="app" style="width:100%">
+    <template>
+        <el-container v-loading.fullscreen.lock="loading">
+
+            <el-main class="mainMain">
+              <div class="form-table-box">
+                <!-- <div class="form-table-flex">
+                  <el-button @click="getTableList" type="primary" icon="el-icon-refresh" size="small"></el-button>
+                  <el-button @click="addClick" type="primary" size="small">添加</el-button>
+                </div> -->
+                <div class="">
+                  <el-form ref="form" inline :model="formItem" label-width="0">
+                    <el-form-item label="">
+                      <el-input placeholder="搜索" size="small" v-model="formItem.search"></el-input>
+                    </el-form-item>
+                    <el-form-item label="">
+                      <el-button @click="queryClick" type="primary" icon="el-icon-search" size="small"></el-button>
+                    </el-form-item>
+                  </el-form>
+                </div>
+              </div>
+              <el-table  @selection-change="handleSelectionChange"
+                        :data="tableList"
+                        border
+                        style="width: 100%">
+                        <el-table-column
+                        type="selection"
+                        width="55">
+                      </el-table-column>
+                    <el-table-column  width="80"
+                            prop="id"
+                            label="序号">
+                    </el-table-column>
+                    <el-table-column  width="80"
+                            prop="visitor_id"
+                            label="邀请码">
+                    </el-table-column>
+                    <el-table-column  min-width="200"
+                            prop="help_words"
+                            label="状态">
+                    </el-table-column>
+                    
+                    <!-- <el-table-column  width="140"
+                            prop="id"
+                            label="操作">
+                        <template slot-scope="scope">
+                            <el-button @click="updata(scope.row)" type="primary" size="mini"  icon="el-icon-edit"></el-button>
+                            <el-button @click="del(scope.row)" type="danger" size="mini"  icon="el-icon-delete"></el-button>
+                        </template>
+                    </el-table-column> -->
+                </el-table>
+                <div class="pagination">
+                  <el-pagination
+                  background
+                  @current-change="pageChange"
+                  layout="prev, pager, next"
+                  :total="total">
+                </el-pagination>
+              </div>
+            </el-main>
+
+        </el-container>
+    </template>
+
+</div>
+
+<script>
+  var app=new Vue({
+      el: '#app',
+      data: {
+        formItem: {
+          search: "",
+          page: 1,
+          pagesize: 10,
+        },
+        loading: false,
+        tableList: [],
+        total:0,
+      },
+      mounted:function() {
+        this.getTableList();
+      },
+      methods: {
+        queryClick(){
+          this.formItem.page = 1;
+          this.getTableList();
+        },
+        pageChange(val){
+          this.formItem.page = val;
+          this.getTableList();
+        },
+        getTableList(){
+          var _this=this;
+         this.loading = true;
+          this.sendAjax('/wallet_all','get',this.formItem,function(ret){
+            console.log(ret)
+              _this.tableList = ret.list;
+              _this.total = ret.count || 0;
+              _this.loading = false;
+          })
+        },
+        sendAjax(url,method,params,callback){
+                let _this=this;
+                $.ajax({
+                    type: method,
+                    url: url,
+                    data:params,
+                    headers: {
+                        "token": localStorage.getItem("token")
+                    },
+                    success: function(data) {
+                        if(data.code!=200){
+                            _this.$message({
+                                message: data.msg,
+                                type: 'error'
+                            });
+                            _this.loading = false;
+                        }else if(data.result!=null){
+                            callback(data.result);
+                        }else{
+                            callback(data);
+                        }
+                        _this.fullscreenLoading=false
+
+                    }
+                });
+            },
+      },
+  })
+</script>
+</body>
+</html>

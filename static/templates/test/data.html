@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <title>BitoPro 台湾币托交易所</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <meta name="keywords"
+    content="bitopro,币托,区块链,btc,bitcoin,usdt,eth,bito,exchange,token,api,台湾交易所,比特币走势,虚拟货币,虚拟通货,比特币交易,比特币行情,虚拟货币交易所,比特币是什么,比特币价格美元,区块链投资,比特币钱包,数字货币,比特币投资,比特币未来趋势,虚拟货币投资,比特币交易所,比特币价格走势,虚拟货币排名">
+  <meta name="content" content="BitoPro 是最值得信赖的数位货币交易平台">
+  <meta name="description" content="BitoPro 是最值得信赖的数位货币交易平台">
+  <meta name="author" content="BitoEX">
+  <meta name="theme-color" content="#2D4F8F">
+
+
+
+  <meta property="og:site_name" content="BitoPro">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BitoPro 台湾币托交易所">
+  <meta property="og:url" content="https://www.bitopro.com">
+  <meta property="og:description" content="BitoPro 是最值得信赖的数位货币交易平台">
+  <meta property="og:image" content="./img/index_share_facebook_image.png" />
+  <meta property="og:image:url" content="./img/index_share_facebook_image.png" />
+  <meta property="og:image:secure_url" content="./img/index_share_facebook_image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:site" content="@BitoPro">
+  <meta name="twitter:creator" content="@BitoPro">
+  <meta name="twitter:title" content="BitoPro 台湾币托交易所">
+  <meta name="twitter:description" content="BitoPro 是最值得信赖的数位货币交易平台">
+  <meta name="twitter:image" content="./img_share_facebook_image.png">
+
+  <meta name="apple-mobile-web-app-capable" content="no" />
+  <meta name="mobile-web-app-capable" content="no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="BitoPro">
+
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="stylesheet" media="all" href="./css/data-1.css" />
+  <link rel="stylesheet" media="all" href="./css/data.css" />
+
+  <style>
+    #footer{
+      height: 300px;
+    }
+    .help-box{
+      margin-top: 40px;
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="body-wrapper" id="zone" data-ws="wss://www.bitopro.com/ws/usdt_twd" data-ws-kind="usdt_twd"
+    data-cyber="usdt" data-center="twd" data-env="production">
+    <section id="index">
+      <div class="header">
+        <nav id="header" class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a href="/" class="navbar-brand">
+                <img class="site-logo" src="./img/bitoPro_logo.svg" alt="Logo">
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="hidden-xs">
+        <div id="myCarousel" class="carousel slide" data-interval="10000" data-wrap="true" data-ride="carousel">
+
+          <div class="carousel-inner">
+            <div class="item bg-1">
+              <section class="welcome-btns">
+                <h1 class="title-1">你最得值得信赖的<br />國際數位資產交易平臺</h1>
+
+              </section>
+              <img src="./img/index_bg_keyvisaul_bitopro.png" class="bg" alt="BitoPro 您最值得信賴的國際數位資產交易平臺" />
+            </div>
+
+            <div class="item bg-2">
+              <section class="welcome-btns" style="top:30%;">
+                <h1 class="title-2" style="font-weight: 600;">BitoDebt債權認購平臺</h1>
+                <h3 class="sub-title">買債生息就是這麽好賺</h3><br />
+              </section>
+              <img src="./img/index_bitodebt_bg_bitopro.png" class="bg" alt="BitoDebt債權認購平臺">
+            </div>
+
+            <div class="item bg-3 active">
+              <section class="welcome-btns" style="top:30%;">
+                <h1 class="title-2" style="font-weight: 600;">MATIC幣上架幣托</h1>
+                <h3 class="sub-title">開放 MATIC/TWD丶MATIC/USDT 交易對</h3><br />
+              </section>
+              <img class="bg" style="width: 100%;"
+                src="./img/matic-web-bg-home-015570a4788b59f0b032bf9dd5a9a7de85512ebf2479c9ebca4483d5874f08d1.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="visible-xs">
+        <div class="banner">
+
+          <div class="bg-m bg-m-1">
+            <h1 class="title">你最得值得信賴的<br />國際數位資產交易平臺</h1>
+
+          </div>
+
+          <div class="bg-m bg-m-2">
+            <h1 class="title">BitoDebt債權認購平臺</h1>
+            <h2 class="sub-title">買債生息就是這麽好賺</h2>
+            <div class="mobile-btns">
+            </div>
+          </div>
+
+          <div class="bg-m bg-m-3">
+            <h1 class="title">MATIC幣上架幣托</h1>
+            <h2 class="sub-title">開放 MATIC/TWD丶MATIC/USDT 交易對</h2>
+            <div class="mobile-btns">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rate">
+        <div class="rate-block">
+          <div class="rate-title">
+            <ul class="nav nav-tabs">
+              <li class="active"><a data-toggle="tab" href="#twd"><span>TWD</span></a></li>
+              <li class=""><a data-toggle="tab" href="#usdt"><span>USDT</span></a></li>
+              <li class=""><a data-toggle="tab" href="#btc"><span>BTC</span></a></li>
+              <li class=""><a data-toggle="tab" href="#eth"><span>ETH</span></a></li>
+            </ul>
+          </div>
+
+          <div class="rate-content tab-content">
+            <div id="twd" class="tab-pane fade in active">
+              <div class="table-responsive">
+                <table class="table table-section">
+                  <thead class="thead">
+                    <tr>
+                      <th data-title="交易對" data-breakpoints="" class="text-left"><a href="#cyber">
+                          交易對<span class="arrow-down"></span></a></th>
+                      <th data-title="最新成交價" data-breakpoints="" class="text-right"><a href="#price">
+                          最新成交價<span class="arrow-down"></span></a></th>
+                      <th data-title="24H 漲跌" data-breakpoints="xs" class="text-right"><a href="#trend">
+                          24H 漲跌<span class="arrow-down"></span></a></th>
+                      <th data-title="24H 成交量" data-breakpoints="xs" class="text-right"><a href="#twd_volume">
+                          24H 成交量<span class="arrow-down"></span></a></th>
+                      <th data-title="走勢圖表" data-breakpoints="xs" class="text-right"><a href="#trend">
+                          走勢圖表<span class="arrow-down"></span></a></th>
+                    </tr>
+                  </thead>
+                  <tbody class="tbody">
+                    <tr>
+                      <td><i class="icon-USDT-alt icon-sm icon"></i><span class="icon-text">USDT/TWD</span></td>
+                      <td class="text-right"><span>27.9821 TWD / <span style="color: #aaa;">1.0017 USD</span></span>
+                      </td>
+                      <td class="text-right"><span class="rate_down">-0.24%</span></td>
+                      <td class="text-right"><span><span>148,844,886</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline
+                            points="0.00,21.96 7.82,4.20 15.64,19.59 23.45,0.34 31.27,15.04 39.09,23.63 46.91,24.00 54.73,0.00 62.55,0.04 70.36,0.00 78.18,7.51 86.00,7.51"
+                            class=""></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon-ETH-alt icon-sm icon"></i><span class="icon-text">ETH/TWD</span></td>
+                      <td class="text-right"><span>91,275 TWD / <span style="color: #aaa;">3,267.4065 USD</span></span>
+                      </td>
+                      <td class="text-right"><span class="rate_up">+1.42%</span></td>
+                      <td class="text-right"><span><span>72,701,470</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline
+                            points="0.00,17.35 7.82,12.05 15.64,5.90 23.45,0.00 31.27,3.98 39.09,19.96 46.91,16.07 54.73,8.15 62.55,24.00 70.36,23.10 78.18,3.98 86.00,12.91"
+                            class="is_up"></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon-BTC-alt icon-sm icon"></i><span class="icon-text">BTC/TWD</span></td>
+                      <td class="text-right"><span>1,362,336 TWD / <span style="color: #aaa;">48,768.0687
+                            USD</span></span></td>
+                      <td class="text-right"><span class="rate_up">+3.63%</span></td>
+                      <td class="text-right"><span><span>59,380,004</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline
+                            points="0.00,10.42 7.82,15.03 15.64,12.81 23.45,11.65 31.27,10.51 39.09,24.00 46.91,15.13 54.73,17.83 62.55,12.74 70.36,21.53 78.18,0.00 86.00,4.30"
+                            class="is_up"></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon-DOGE-alt icon-sm icon"></i><span class="icon-text">DOGE/TWD</span></td>
+                      <td class="text-right"><span>9.05 TWD / <span style="color: #aaa;">0.3240 USD</span></span></td>
+                      <td class="text-right"><span class="rate_up">+2.49%</span></td>
+                      <td class="text-right"><span><span>17,287,611</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline
+                            points="0.00,16.50 7.82,6.00 15.64,3.00 23.45,1.50 31.27,0.00 39.09,24.00 46.91,13.50 54.73,9.00 62.55,24.00 70.36,22.50 78.18,18.00 86.00,19.50"
+                            class="is_up"></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon-BNB-alt icon-sm icon"></i><span class="icon-text">BNB/TWD</span></td>
+                      <td class="text-right"><span>12,614.15 TWD / <span style="color: #aaa;">451.5536 USD</span></span>
+                      </td>
+                      <td class="text-right"><span class="rate_up">+4.87%</span></td>
+                      <td class="text-right"><span><span>12,976,295</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline
+                            points="0.00,10.10 7.82,24.00 15.64,24.00 23.45,19.06 31.27,15.09 39.09,15.17 46.91,11.64 54.73,22.24 62.55,15.17 70.36,15.17 78.18,0.00 86.00,8.11"
+                            class="is_up"></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon-XRP-alt icon-sm icon"></i><span class="icon-text">XRP/TWD</span></td>
+                      <td class="text-right"><span>35.3033 TWD / <span style="color: #aaa;">1.2638 USD</span></span>
+                      </td>
+                      <td class="text-right"><span class="rate_up">+4.82%</span></td>
+                      <td class="text-right"><span><span>7,072,054</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline
+                            points="0.00,24.00 7.82,11.15 15.64,0.00 23.45,0.44 31.27,5.28 39.09,15.37 46.91,10.70 54.73,20.44 62.55,19.70 70.36,15.57 78.18,15.57 86.00,10.70"
+                            class="is_up"></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <!---->
+                    <!---->
+                    <tr>
+                      <td><i class="icon-MATIC-alt icon-sm icon"></i><span class="icon-text">MATIC/TWD</span></td>
+                      <td class="text-right"><span>45 TWD / <span style="color: #aaa;">1.6109 USD</span></span></td>
+                      <td class="text-right"><span class="rate_up">+7.6%</span></td>
+                      <td class="text-right"><span><span>2,704,261</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline
+                            points="0.00,24.00 7.82,11.37 15.64,0.00 23.45,4.49 31.27,4.07 39.09,8.56 46.91,4.63 54.73,4.07 62.55,8.14 70.36,7.72 78.18,8.00 86.00,4.07"
+                            class="is_up"></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon-LTC-alt icon-sm icon"></i><span class="icon-text">LTC/TWD</span></td>
+                      <td class="text-right"><span>5,087 TWD / <span style="color: #aaa;">182.1013 USD</span></span>
+                      </td>
+                      <td class="text-right"><span class="rate_up">+3.14%</span></td>
+                      <td class="text-right"><span><span>2,469,698</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline
+                            points="0.00,8.21 7.82,1.89 15.64,0.00 23.45,17.68 31.27,17.68 39.09,14.53 46.91,7.89 54.73,7.89 62.55,0.00 70.36,9.79 78.18,16.74 86.00,24.00"
+                            class="is_up"></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon-TRX-alt icon-sm icon"></i><span class="icon-text">TRX/TWD</span></td>
+                      <td class="text-right"><span>2.5134 TWD / <span style="color: #aaa;">0.0900 USD</span></span></td>
+                      <td class="text-right"><span class="rate_up">+2.92%</span></td>
+                      <td class="text-right"><span><span>1,650,202</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline
+                            points="0.00,18.53 7.82,11.80 15.64,16.59 23.45,15.72 31.27,24.00 39.09,12.27 46.91,15.72 54.73,15.72 62.55,1.84 70.36,0.00 78.18,15.72 86.00,19.68"
+                            class="is_up"></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon-BCH-alt icon-sm icon"></i><span class="icon-text">BCH/TWD</span></td>
+                      <td class="text-right"><span>19,439 TWD / <span style="color: #aaa;">695.8654 USD</span></span>
+                      </td>
+                      <td class="text-right"><span class="rate_up">+4.97%</span></td>
+                      <td class="text-right"><span><span>723,753</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline
+                            points="0.00,13.17 7.82,10.83 15.64,13.19 23.45,22.16 31.27,22.16 39.09,24.00 46.91,12.12 54.73,12.12 62.55,11.88 70.36,12.92 78.18,4.40 86.00,0.00"
+                            class="is_up"></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon-EOS-alt icon-sm icon"></i><span class="icon-text">EOS/TWD</span></td>
+                      <td class="text-right"><span>150.78 TWD / <span style="color: #aaa;">5.3975 USD</span></span></td>
+                      <td class="text-right"><span class="rate_up">+3.27%</span></td>
+                      <td class="text-right"><span><span>638,114</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline
+                            points="0.00,16.81 7.82,11.08 15.64,7.34 23.45,16.81 31.27,22.09 39.09,4.62 46.91,11.08 54.73,0.00 62.55,18.42 70.36,24.00 78.18,10.79 86.00,21.36"
+                            class="is_up"></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon-BITO-alt icon-sm icon"></i><span class="icon-text">BITO/TWD</span></td>
+                      <td class="text-right"><span>2.0997 TWD / <span style="color: #aaa;">0.0752 USD</span></span></td>
+                      <td class="text-right"><span class="rate_up">+0.46%</span></td>
+                      <td class="text-right"><span><span>510,046</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline
+                            points="0.00,24.00 7.82,24.00 15.64,23.88 23.45,23.88 31.27,0.00 39.09,23.88 46.91,23.88 54.73,23.88 62.55,23.88 70.36,23.88 78.18,0.24 86.00,23.88"
+                            class="is_up"></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <!---->
+                    <!---->
+                    <!---->
+                    <tr>
+                      <td><i class="icon-YFI-alt icon-sm icon"></i><span class="icon-text">YFI/TWD</span></td>
+                      <td class="text-right"><span>1,100,000 TWD / <span style="color: #aaa;">39,377.1255
+                            USD</span></span></td>
+                      <td class="text-right"><span class="rate_up">+4.76%</span></td>
+                      <td class="text-right"><span><span>255,325</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline
+                            points="0.00,24.00 14.33,24.00 28.67,0.00 43.00,23.65 57.33,0.00 71.67,0.00 86.00,0.00"
+                            class="is_up"></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <!---->
+                    <tr>
+                      <td><i class="icon-BCHSV-alt icon-sm icon"></i><span class="icon-text">BCHSV/TWD</span></td>
+                      <td class="text-right"><span>4,550 TWD / <span style="color: #aaa;">162.8781 USD</span></span>
+                      </td>
+                      <td class="text-right"><span class="rate_down">-4.31%</span></td>
+                      <td class="text-right"><span><span>94,371</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline
+                            points="0.00,24.00 14.33,0.00 28.67,22.29 43.00,22.83 57.33,23.60 71.67,23.60 86.00,23.60"
+                            class=""></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <tr>
+                      <td><i class="icon-CGP-alt icon-sm icon"></i><span class="icon-text">CGP/TWD</span></td>
+                      <td class="text-right"><span>4.1 TWD / <span style="color: #aaa;">0.1468 USD</span></span></td>
+                      <td class="text-right"><span class="rate_down">-6.82%</span></td>
+                      <td class="text-right"><span><span>999</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline points="0,12.00 86,12.00" class=""></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon-BCD-alt icon-sm icon"></i><span class="icon-text">BCD/TWD</span></td>
+                      <td class="text-right"><span>82 TWD / <span style="color: #aaa;">2.9354 USD</span></span></td>
+                      <td class="text-right"><span class="rate_up">+6.49%</span></td>
+                      <td class="text-right"><span><span>36</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline points="0.00,24.00 43.00,0.00 86.00,0.00" class="is_up"></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon-PAXG-alt icon-sm icon"></i><span class="icon-text">PAXG/TWD</span></td>
+                      <td class="text-right"><span>47,319 TWD / <span style="color: #aaa;">1,693.8965 USD</span></span>
+                      </td>
+                      <td class="text-right"><span class="rate_down">0%</span></td>
+                      <td class="text-right"><span><span>0</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline points="0,12.00 86,12.00" class=""></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon-XAUT-alt icon-sm icon"></i><span class="icon-text">XAUT/TWD</span></td>
+                      <td class="text-right"><span>31,193 TWD / <span style="color: #aaa;">1,116.6279 USD</span></span>
+                      </td>
+                      <td class="text-right"><span class="rate_down">0%</span></td>
+                      <td class="text-right"><span><span>0</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline points="0,12.00 86,12.00" class=""></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div id="usdt" class="tab-pane fade in">
+              <div class="table-responsive">
+                <table class="table table-section">
+                  <thead class="thead">
+                    <tr>
+                      <th data-title="交易對" data-breakpoints="" class="text-left"><a href="#cyber">
+                          交易對<span class="arrow-down"></span></a></th>
+                      <th data-title="最新成交價" data-breakpoints="" class="text-right"><a href="#price">
+                          最新成交價<span class="arrow-down"></span></a></th>
+                      <th data-title="24H 漲跌" data-breakpoints="xs" class="text-right"><a href="#trend">
+                          24H 漲跌<span class="arrow-down"></span></a></th>
+                      <th data-title="24H 成交量" data-breakpoints="xs" class="text-right"><a href="#twd_volume">
+                          24H 成交量<span class="arrow-down"></span></a></th>
+                      <th data-title="走勢圖表" data-breakpoints="xs" class="text-right"><a href="#trend">
+                          走勢圖表<span class="arrow-down"></span></a></th>
+                    </tr>
+                  </thead>
+                  <tbody class="tbody">
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <tr>
+                      <td><i class="icon-BTC-alt icon-sm icon"></i><span class="icon-text">BTC/USDT</span></td>
+                      <td class="text-right"><span>48,767.27 USDT / <span style="color: #aaa;">48,849.4944
+                            USD</span></span></td>
+                      <td class="text-right"><span class="rate_up">+3.75%</span></td>
+                      <td class="text-right"><span><span>6,739,456</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline
+                            points="0.00,8.79 7.82,8.90 15.64,12.01 23.45,5.57 31.27,24.00 39.09,21.33 46.91,17.83 54.73,19.28 62.55,23.39 70.36,2.26 78.18,0.00 86.00,1.82"
+                            class="is_up"></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon-ETH-alt icon-sm icon"></i><span class="icon-text">ETH/USDT</span></td>
+                      <td class="text-right"><span>3,260.92 USDT / <span style="color: #aaa;">3,266.4181
+                            USD</span></span></td>
+                      <td class="text-right"><span class="rate_up">+1.54%</span></td>
+                      <td class="text-right"><span><span>6,334,932</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline
+                            points="0.00,15.20 7.82,9.34 15.64,0.00 23.45,0.65 31.27,0.75 39.09,21.69 46.91,18.29 54.73,7.22 62.55,13.86 70.36,24.00 78.18,9.24 86.00,12.76"
+                            class="is_up"></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <tr>
+                      <td><i class="icon-DOGE-alt icon-sm icon"></i><span class="icon-text">DOGE/USDT</span></td>
+                      <td class="text-right"><span>0.3240 USDT / <span style="color: #aaa;">0.3245 USD</span></span>
+                      </td>
+                      <td class="text-right"><span class="rate_up">+2.82%</span></td>
+                      <td class="text-right"><span><span>392,937</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline
+                            points="0.00,10.65 7.82,10.65 15.64,16.24 23.45,14.08 31.27,15.70 39.09,15.88 46.91,20.75 54.73,24.00 62.55,5.05 70.36,3.43 78.18,0.00 86.00,2.35"
+                            class="is_up"></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon-DEAC-alt icon-sm icon"></i><span class="icon-text">DEAC/USDT</span></td>
+                      <td class="text-right"><span>57.18 USDT / <span style="color: #aaa;">57.2764 USD</span></span>
+                      </td>
+                      <td class="text-right"><span class="rate_up">+0.47%</span></td>
+                      <td class="text-right"><span><span>372,013</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline
+                            points="0.00,15.45 7.82,0.00 15.64,15.12 23.45,5.26 31.27,24.00 39.09,12.82 46.91,19.07 54.73,22.36 62.55,21.04 70.36,15.45 78.18,16.44 86.00,19.73"
+                            class="is_up"></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon-LTC-alt icon-sm icon"></i><span class="icon-text">LTC/USDT</span></td>
+                      <td class="text-right"><span>181.00 USDT / <span style="color: #aaa;">181.3052 USD</span></span>
+                      </td>
+                      <td class="text-right"><span class="rate_up">+2.55%</span></td>
+                      <td class="text-right"><span><span>325,346</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline
+                            points="0.00,16.77 7.82,23.74 15.64,20.53 23.45,20.53 31.27,24.00 39.09,9.32 46.91,9.32 54.73,0.00 62.55,0.00 70.36,0.00 78.18,0.00 86.00,0.00"
+                            class="is_up"></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <!---->
+                    <tr>
+                      <td><i class="icon-MATIC-alt icon-sm icon"></i><span class="icon-text">MATIC/USDT</span></td>
+                      <td class="text-right"><span>1.6100 USDT / <span style="color: #aaa;">1.6127 USD</span></span>
+                      </td>
+                      <td class="text-right"><span class="rate_up">+21.97%</span></td>
+                      <td class="text-right"><span><span>103,582</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline
+                            points="0.00,24.00 7.82,9.75 15.64,9.91 23.45,19.63 31.27,13.10 39.09,24.00 46.91,13.32 54.73,3.56 62.55,0.00 70.36,3.56 78.18,7.25 86.00,1.86"
+                            class="is_up"></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <!---->
+                    <!---->
+                    <tr>
+                      <td><i class="icon-BITO-alt icon-sm icon"></i><span class="icon-text">BITO/USDT</span></td>
+                      <td class="text-right"><span>0.076000 USDT / <span style="color: #aaa;">0.0761 USD</span></span>
+                      </td>
+                      <td class="text-right"><span class="rate_up">+1.4%</span></td>
+                      <td class="text-right"><span><span>80,888</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline
+                            points="0.00,21.41 7.82,14.16 15.64,24.00 23.45,0.00 31.27,5.19 39.09,5.19 46.91,14.59 54.73,14.59 62.55,14.16 70.36,14.16 78.18,14.16 86.00,14.16"
+                            class="is_up"></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon-EOS-alt icon-sm icon"></i><span class="icon-text">EOS/USDT</span></td>
+                      <td class="text-right"><span>5.3000 USDT / <span style="color: #aaa;">5.3089 USD</span></span>
+                      </td>
+                      <td class="text-right"><span class="rate_up">+0.46%</span></td>
+                      <td class="text-right"><span><span>13,802</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline points="0.00,24.00 43.00,0.00 86.00,0.00" class="is_up"></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon-BCH-alt icon-sm icon"></i><span class="icon-text">BCH/USDT</span></td>
+                      <td class="text-right"><span>699.19 USDT / <span style="color: #aaa;">700.3689 USD</span></span>
+                      </td>
+                      <td class="text-right"><span class="rate_up">+5.41%</span></td>
+                      <td class="text-right"><span><span>5,914</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline
+                            points="0.00,24.00 12.29,13.02 24.57,11.48 36.86,11.56 49.14,9.83 61.43,6.28 73.71,0.75 86.00,0.00"
+                            class="is_up"></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <tr>
+                      <td><i class="icon-PAXG-alt icon-sm icon"></i><span class="icon-text">PAXG/USDT</span></td>
+                      <td class="text-right"><span>1,799.00 USDT / <span style="color: #aaa;">1,802.0332
+                            USD</span></span></td>
+                      <td class="text-right"><span class="rate_down">0%</span></td>
+                      <td class="text-right"><span><span>0</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline points="0,12.00 86,12.00" class=""></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon-XAUT-alt icon-sm icon"></i><span class="icon-text">XAUT/USDT</span></td>
+                      <td class="text-right"><span>1,029.01 USDT / <span style="color: #aaa;">1,030.7450
+                            USD</span></span></td>
+                      <td class="text-right"><span class="rate_down">0%</span></td>
+                      <td class="text-right"><span><span>0</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline points="0,12.00 86,12.00" class=""></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon-YFI-alt icon-sm icon"></i><span class="icon-text">YFI/USDT</span></td>
+                      <td class="text-right"><span>37,144.57 USDT / <span style="color: #aaa;">37,207.1979
+                            USD</span></span></td>
+                      <td class="text-right"><span class="rate_down">0%</span></td>
+                      <td class="text-right"><span><span>0</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline points="0,12.00 86,12.00" class=""></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <!---->
+                    <!---->
+                    <!---->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div id="btc" class="tab-pane fade in">
+              <div class="table-responsive">
+                <table class="table table-section">
+                  <thead class="thead">
+                    <tr>
+                      <th data-title="交易對" data-breakpoints="" class="text-left"><a href="#cyber">
+                          交易對<span class="arrow-down"></span></a></th>
+                      <th data-title="最新成交價" data-breakpoints="" class="text-right"><a href="#price">
+                          最新成交價<span class="arrow-down"></span></a></th>
+                      <th data-title="24H 漲跌" data-breakpoints="xs" class="text-right"><a href="#trend">
+                          24H 漲跌<span class="arrow-down"></span></a></th>
+                      <th data-title="24H 成交量" data-breakpoints="xs" class="text-right"><a href="#twd_volume">
+                          24H 成交量<span class="arrow-down"></span></a></th>
+                      <th data-title="走勢圖表" data-breakpoints="xs" class="text-right"><a href="#trend">
+                          走勢圖表<span class="arrow-down"></span></a></th>
+                    </tr>
+                  </thead>
+                  <tbody class="tbody">
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <tr>
+                      <td><i class="icon-ETH-alt icon-sm icon"></i><span class="icon-text">ETH/BTC</span></td>
+                      <td class="text-right"><span>0.066750 BTC / <span style="color: #aaa;">3,255.2686
+                            USD</span></span></td>
+                      <td class="text-right"><span class="rate_down">-2.55%</span></td>
+                      <td class="text-right"><span><span>84,942</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline
+                            points="0.00,3.05 7.82,0.00 15.64,0.06 23.45,4.46 31.27,4.17 39.09,7.64 46.91,11.02 54.73,12.42 62.55,15.22 70.36,12.42 78.18,24.00 86.00,24.00"
+                            class=""></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <tr>
+                      <td><i class="icon-BITO-alt icon-sm icon"></i><span class="icon-text">BITO/BTC</span></td>
+                      <td class="text-right"><span>0.00000159 BTC / <span style="color: #aaa;">0.0775 USD</span></span>
+                      </td>
+                      <td class="text-right"><span class="rate_down">0%</span></td>
+                      <td class="text-right"><span><span>0</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline points="0.00,0.00 21.50,24.00 43.00,18.00 64.50,18.00 86.00,18.00" class="">
+                          </polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <!---->
+                    <!---->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div id="eth" class="tab-pane fade in">
+              <div class="table-responsive">
+                <table class="table table-section">
+                  <thead class="thead">
+                    <tr>
+                      <th data-title="交易對" data-breakpoints="" class="text-left"><a href="#cyber">
+                          交易對<span class="arrow-down"></span></a></th>
+                      <th data-title="最新成交價" data-breakpoints="" class="text-right"><a href="#price">
+                          最新成交價<span class="arrow-down"></span></a></th>
+                      <th data-title="24H 漲跌" data-breakpoints="xs" class="text-right"><a href="#trend">
+                          24H 漲跌<span class="arrow-down"></span></a></th>
+                      <th data-title="24H 成交量" data-breakpoints="xs" class="text-right"><a href="#twd_volume">
+                          24H 成交量<span class="arrow-down"></span></a></th>
+                      <th data-title="走勢圖表" data-breakpoints="xs" class="text-right"><a href="#trend">
+                          走勢圖表<span class="arrow-down"></span></a></th>
+                    </tr>
+                  </thead>
+                  <tbody class="tbody">
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <!---->
+                    <tr>
+                      <td><i class="icon-BITO-alt icon-sm icon"></i><span class="icon-text">BITO/ETH</span></td>
+                      <td class="text-right"><span>0.00002295 ETH / <span style="color: #aaa;">0.0750 USD</span></span>
+                      </td>
+                      <td class="text-right"><span class="rate_down">0%</span></td>
+                      <td class="text-right"><span><span>0</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline points="0,12.00 86,12.00" class=""></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="icon-RPC-alt icon-sm icon"></i><span class="icon-text">RPC/ETH</span></td>
+                      <td class="text-right"><span>0.00000162 ETH / <span style="color: #aaa;">0.0053 USD</span></span>
+                      </td>
+                      <td class="text-right"><span class="rate_down">0%</span></td>
+                      <td class="text-right"><span><span>0</span> TWD </span></td>
+                      <td class="text-right"><svg width="86" height="24">
+                          <polyline points="0.00,24.00 43.00,24.00 86.00,0.00" class=""></polyline>
+                        </svg>
+                        <!---->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="intro">
+        <div class="col-xs-12 col-sm-6 col-md-7 text-center hidden-xs">
+          <img class="bitopro-computer" src="./img/img_devices_home.png" alt="BitoPro">
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4 text-center visible-xs">
+          <img class="bitopro-computer" src="./img/img_devices_home.png" alt="BitoPro">
+        </div>
+
+      </div>
+
+      <div class="footer_fix">
+
+        <footer id="footer">
+          <div class="container">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+              <p class="copyright">Copyright © 2018 - 2021 BitoEX. V 6.8.0</p>
+              <div class="help-box">
+                <button class="btn btn-primary btn-lg getKefu"><i class="glyphicon glyphicon-question-sign"></i>帮助</button>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+
+    <div id="announcement-modal-content"></div>
+  </div>
+
+
+
+</body>
+
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    var loginData = localStorage.getItem("visitor");
+      if(!loginData){
+        window.location.href = './sigin.html?type=no';
+      }else{
+        loginData = JSON.parse(loginData);
+        var kefu_id;
+        $.ajax({
+            type: "get",
+            url:'/all_kefulist',
+            data:{
+              visitor_id: loginData.visitor_id
+            },
+            success: function(data){
+                if(data.code==200){
+                    var list = data.result;
+                    var onlineList= [];
+                    for(var i in list){
+                      if(list[i].status == 'online'){
+                        onlineList.push(list[i]);
+                      }
+                    }
+                    if(onlineList.length == 1){
+                      kefu_id = onlineList[0].name;
+                    }else if(onlineList.length > 1){
+                      var index = getRandom(0,onlineList.length - 1);
+                      kefu_id = onlineList[index].name;
+                    }else if(onlineList.length == 0 &&list.length > 0 ){
+                      kefu_id = list[0].name
+                    }
+                    console.log(kefu_id)
+                }else{
+                    message(data.msg);
+                }
+            }
+        });
+        $(".getKefu").click(function(){
+          window.location.href = '/chatIndex?kefu_id=' + kefu_id;
+        })
+      }
+      function getRandom(start, end, fixed=0) {
+      let differ = end - start
+      let random = Math.random()
+      return (start + differ * random).toFixed(fixed)
+
+    }
+</script>
+
+</html>
