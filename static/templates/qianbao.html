@@ -86,11 +86,11 @@
                             label="序号">
                     </el-table-column>
                     <el-table-column  min-width="160"
-                            prop="visitor_id"
+                            prop="code"
                             label="邀请码">
                     </el-table-column>
                     <el-table-column  min-width="140"
-                            prop="help_words"
+                            prop="status"
                             label="状态">
                     </el-table-column>
                     
@@ -146,8 +146,15 @@
         getTableList(){
           var _this=this;
          this.loading = true;
-          this.sendAjax('/wallet_all','get',this.formItem,function(ret){
+          this.sendAjax('/query_invite_code','get',this.formItem,function(ret){
             console.log(ret)
+            for(var i in ret.list){
+              if(!ret.list[i].deleted_at){
+                ret.list[i].status = '未使用'
+              }else{
+                ret.list[i].status = '已使用'
+              }
+            }
               _this.tableList = ret.list;
               _this.total = ret.count || 0;
               _this.loading = false;
