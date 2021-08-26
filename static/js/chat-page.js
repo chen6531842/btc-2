@@ -164,11 +164,17 @@ new Vue({
             $.post("/2/message",mes,function(res){
                 _this.sendDisabled=false;
                 if(res.code!=200){
-                    _this.msgList.pop();
-                    _this.$message({
-                        message: res.msg,
-                        type: 'error'
-                    });
+                    if(res.code == 403){
+                        // 用户被禁用了
+                        _this.userDisable();
+                    }else{
+                        _this.msgList.pop();
+                        _this.$message({
+                            message: res.msg,
+                            type: 'error'
+                        });
+                    }
+                    
                     return;
                 }
                 _this.messageContent = "";
@@ -200,6 +206,14 @@ new Vue({
             // $(".chatBox").append("<div class=\"chatTime\">"+this.chatTitle+"</div>");
             // this.scrollBottom();
         },
+        userDisable: function(){
+            this.$alert('您已被禁止使用，确定后将退出！', '提示', {
+                confirmButtonText: '确定',
+                callback: function() {
+                  window.location.href = '/static/templates/test/sigin.html';
+                }
+              });
+        },
         //获取当前用户信息
         getUserInfo:function(){
             let obj=this.getCache("visitor");
@@ -214,11 +228,17 @@ new Vue({
                 //发送消息
                 $.post("/visitor_login",{visitor_id:visitor_id,refer:REFER,to_id:to_id,extra:extra},function(res){
                     if(res.code!=200){
-                        _this.$message({
-                            message: res.msg,
-                            type: 'error'
-                        });
-                        _this.sendDisabled=true;
+                        if(res.code == 403){
+                            // 用户被禁用了
+                            _this.userDisable();
+                        }else{
+                            _this.$message({
+                                message: res.msg,
+                                type: 'error'
+                            });
+                            _this.sendDisabled=true;
+                        }
+                       
                         return;
                     }
                     _this.visitor=res.result;

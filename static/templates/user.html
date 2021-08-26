@@ -120,9 +120,11 @@
                             prop="id"
                             label="状态">
                         <template slot-scope="scope">
-                          <el-switch
+                          <el-switch active-text="启用"
+                          inactive-text="禁用"
                             v-model="scope.row.switch" @change="switchChange(scope.row)">
                           </el-switch>
+                          
                             <!-- <el-button @click="updata(scope.row)" type="primary" size="mini"  icon="el-icon-edit"></el-button>
                             <el-button @click="del(scope.row)" type="danger" size="mini"  icon="el-icon-delete"></el-button> -->
                         </template>
@@ -269,6 +271,17 @@
         },
         switchChange(item){
           console.log(item);
+          var _this = this;
+          this.sendAjax('/visitor_forbid','post',{
+            name: item.name,
+            forbid_status: item.forbid_status == 1 ? 0 : 1
+          },function(ret){
+            _this.$message({
+              type: 'success',
+              message: '操作成功!'
+            });
+            _this.getTableList();
+          })
         },
         submitRoleForm(formName){
           var _this = this;
@@ -340,7 +353,7 @@
           this.sendAjax('/all_visitors','get',this.formItem,function(ret){
             var list = ret.list || [];
             for(var i in list){
-              list[i].switch = list[i].status == 0 ? true :false;
+              list[i].switch = list[i].forbid_status == 1 ? true :false;
             }
               _this.tableList = list;
               _this.total = ret.count || 0;
