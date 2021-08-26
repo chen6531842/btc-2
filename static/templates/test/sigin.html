@@ -165,7 +165,7 @@
                   message('登錄成功');
                   localStorage.setItem("visitor",JSON.stringify(data.result));
                   setTimeout(function(){
-                    window.location.href = './index.html';
+                    window.location.href = '/';
                   },1000)
                 }else if(data.code==403){
                   message('您已經被禁用')

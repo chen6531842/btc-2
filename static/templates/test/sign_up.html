@@ -191,7 +191,7 @@
                 message('注册成功');
                 localStorage.setItem("visitor",JSON.stringify(data.result));
                 setTimeout(function(){
-                  window.location.href = './index.html';
+                  window.location.href = '/';
                 },1000)
               }else{ 
                 message(data.msg)
