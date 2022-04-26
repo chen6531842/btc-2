@@ -4,7 +4,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>28.0213 (USDT/TWD) BitoPro 台灣幣託交易所</title>
+  <title>台灣幣託交易所</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -72,7 +72,7 @@
           <div class="ibox">
             <div class="ibox-content ibox-content-device">
               <div class="text-center">
-                <h2 class="login-title">登入</h2>
+                <h2 class="login-title">登錄</h2>
               </div>
               <form id="new_user"  class="simple_form new_user">
                 <div class="form-group">
@@ -130,7 +130,7 @@
     $(function(){
       var type = query('type');
       if(type == 'no'){
-        message('请先登录');
+        message('請先登錄');
       }
       var isPassword = true;
       $('#js-password-show-hide').click(function(){
@@ -162,12 +162,16 @@
               },
               success: function(data){
                 if(data.code==200){
-                  message('登录成功');
+                  message('登錄成功');
                   localStorage.setItem("visitor",JSON.stringify(data.result));
                   setTimeout(function(){
-                    window.location.href = './index.html';
+                    window.location.href = '/';
                   },1000)
-                }else{ 
+                }
+                // else if(data.code==403){
+                //   message('您已經被禁用')
+                // }
+                else{ 
                   message(data.msg)
                 }
               }
